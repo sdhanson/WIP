@@ -15,6 +15,65 @@ string colNames[] = {"Date", "Time", "Delta Time", "Mouse Button", "userAccelera
 	"gameObject.transform.position.x", "gameObject.transform.position.y", "gameObject.transform.position.z", "eulerAngles.x", "eulerAngles.y",
 	"eulerAngles.z"};
 
+void gyroPairs(ifstream& input) {
+	// declaring stringstream variables
+	string line, word;
+
+	// initializing column val of gyro.userAcceleration.y
+	int yCol = 5;
+
+	// inititalizing column val of gyro.userAcceleration.z
+	int zCol = 6;
+
+	// vector of yz pairs
+	vector<std::pair<int, int> > pairs;
+
+
+	// takes in each line, reads garbage numbers up to column number
+	// takes the column we want and compares to prev max/min and resets
+	// if need be
+	while(getline(input, line)) {
+		stringstream ss;
+
+		// discarding garbage values
+		for(int i=0; i<yCol; i++) {
+			string temp;
+			ss << line;
+			ss >> temp;
+		}
+
+		// converting y column string to int
+		ss << line;
+		ss >> word;
+		stringstream tt;
+		tt << word;
+		int y;
+		tt >> y;
+
+		// reading in values until z column (useless rn bc
+		// in my program they are always 1 away)
+		for(int i=0; i < (zCol-yCol-1); i++) {
+			string temp;
+			ss << line;
+			ss >> temp;
+		}
+
+		// converting z column string to int
+		ss << line;
+		ss >> word;
+		stringstream zz;
+		zz << word;
+		int z;
+		zz >> z;
+
+		// push into pair
+		pairs.push_back(make_pair(y, z));
+	}
+
+	// can be used to plot
+
+}
+
 // finds max/min magnitudes & line number
 void absMaxMin(ifstream& input, int col, ofstream& output) {
 	// declaring stringstream variables
@@ -267,10 +326,6 @@ int main(int argc, char* argv[]) {
 
 			ifstream input3(inputs[j]);
 			change(input3, i, output);
-			output << endl;
-
-			ifstream input4(inputs[j]);
-			increasing(input4, i, output);
 			output << endl;
 		}
 	}
