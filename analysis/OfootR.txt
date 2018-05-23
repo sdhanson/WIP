@@ -13,50 +13,6 @@ Min change: 2.1133e-05 line: 140
 Average change: 0.00481269
 
 
-INCREASING / DECREASING
-Increasing: 
-1 6
-17 22
-24 25
-27 30
-32 32
-36 38
-41 47
-50 52
-55 62
-67 67
-76 79
-83 84
-86 90
-92 94
-97 100
-106 111
-117 117
-120 123
-127 132
-137 137
-Decreasing: 
-7 16
-23 23
-26 26
-31 31
-33 35
-39 40
-48 49
-53 54
-63 66
-68 75
-80 82
-85 85
-91 91
-95 96
-101 105
-112 116
-118 119
-124 126
-133 136
-
-
 COL: userAcceleration.y
 ABSOLUTE VALUE MAX/MIN
 Max: 0.522054 line: 50
@@ -70,66 +26,6 @@ ABSOLUTE VALUE ONE STEP CHANGE
 Max change: 0.487515 line: 51
 Min change: 1.2448e-05 line: 140
 Average change: 0.0264771
-
-
-INCREASING / DECREASING
-Increasing: 
-1 6
-9 12
-14 18
-20 23
-27 30
-36 36
-38 39
-41 43
-45 53
-57 59
-61 66
-68 70
-73 74
-77 80
-82 82
-85 85
-87 87
-89 90
-93 97
-99 101
-105 106
-110 111
-114 117
-121 121
-123 125
-127 129
-131 132
-135 140
-Decreasing: 
-7 8
-13 13
-19 19
-24 26
-31 35
-37 37
-40 40
-44 44
-54 56
-60 60
-67 67
-71 72
-75 76
-81 81
-83 84
-86 86
-88 88
-91 92
-98 98
-102 104
-107 109
-112 113
-118 120
-122 122
-126 126
-130 130
-133 134
 
 
 COL: userAcceleration.z
@@ -147,55 +43,6 @@ Min change: 3.142e-05 line: 140
 Average change: 0.00655813
 
 
-INCREASING / DECREASING
-Increasing: 
-1 2
-4 6
-9 9
-11 12
-14 18
-23 23
-25 25
-29 31
-35 38
-44 50
-53 54
-60 63
-72 74
-76 80
-83 88
-95 99
-104 105
-107 107
-110 111
-114 117
-126 129
-133 134
-Decreasing: 
-3 3
-7 8
-10 10
-13 13
-19 22
-24 24
-26 28
-32 34
-39 43
-51 52
-55 59
-64 71
-75 75
-81 82
-89 94
-100 103
-106 106
-108 109
-112 113
-118 125
-130 132
-135 140
-
-
 COL: gameObject.transform.position.x
 ABSOLUTE VALUE MAX/MIN
 Max: 1.5 line: 1
@@ -211,14 +58,6 @@ Min change: 1e-06 line: 141
 Average change: 9.71857e-05
 
 
-INCREASING / DECREASING
-Increasing: 
-1 21
-68 79
-Decreasing: 
-22 67
-
-
 COL: gameObject.transform.position.y
 ABSOLUTE VALUE MAX/MIN
 Max: 1.5 line: 1
@@ -229,14 +68,9 @@ Max: 1.5 line: 141
 Min: 1.5 line: 141
 
 ABSOLUTE VALUE ONE STEP CHANGE
-Max change: 0 line: 21075008
+Max change: 0 line: 37
 Min change: 1e+06 line: 141
 Average change: 0
-
-
-INCREASING / DECREASING
-Increasing: 
-Decreasing: 
 
 
 COL: gameObject.transform.position.z
@@ -254,11 +88,6 @@ Min change: 1e-06 line: 141
 Average change: 0.00463007
 
 
-INCREASING / DECREASING
-Increasing: 
-Decreasing: 
-
-
 COL: eulerAngles.x
 ABSOLUTE VALUE MAX/MIN
 Max: 5.9049 line: 29
@@ -272,44 +101,6 @@ ABSOLUTE VALUE ONE STEP CHANGE
 Max change: 1.2612 line: 25
 Min change: 0.0002 line: 106
 Average change: 0.190086
-
-
-INCREASING / DECREASING
-Increasing: 
-9 13
-15 18
-20 29
-38 38
-41 41
-44 46
-50 52
-57 60
-65 68
-72 77
-90 95
-102 105
-111 116
-121 121
-123 127
-132 137
-Decreasing: 
-1 8
-14 14
-19 19
-30 37
-39 40
-42 43
-47 49
-53 56
-61 64
-69 71
-78 89
-96 101
-106 110
-117 120
-122 122
-128 131
-138 139
 
 
 COL: eulerAngles.y
@@ -327,36 +118,10 @@ Min change: 0.000661 line: 136
 Average change: 0.0830409
 
 
-INCREASING / DECREASING
-Increasing: 
-11 20
-30 31
-33 37
-39 39
-51 58
-67 68
-71 71
-79 88
-92 92
-95 105
-Decreasing: 
-1 10
-21 29
-32 32
-38 38
-40 50
-59 66
-69 70
-72 78
-89 91
-93 94
-106 122
-
-
 COL: eulerAngles.z
 ABSOLUTE VALUE MAX/MIN
 Max: 5.8195 line: 15
-Min: 1e+06 line: 21121936
+Min: 1e+06 line: -1325735936
 
 NON ABSOLUTE VALUE MAX/MIN
 Max: 0 line: 15
@@ -366,33 +131,5 @@ ABSOLUTE VALUE ONE STEP CHANGE
 Max change: 0.6604 line: 14
 Min change: 0.0004 line: 124
 Average change: 0.118496
-
-
-INCREASING / DECREASING
-Increasing: 
-1 15
-29 37
-39 43
-49 49
-53 54
-61 61
-64 68
-72 81
-83 86
-88 108
-110 113
-124 128
-Decreasing: 
-16 28
-38 38
-44 48
-50 52
-55 60
-62 63
-69 71
-82 82
-87 87
-109 109
-114 123
 
 

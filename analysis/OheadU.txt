@@ -1,0 +1,135 @@
+COL: userAcceleration.x
+ABSOLUTE VALUE MAX/MIN
+Max: 0.0674681 line: 13
+Min: 3.32952e-05 line: 65
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 0.0674681 line: 14
+Min: -0.0459861 line: 17
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 0.0668589 line: 15
+Min change: 8.71066e-05 line: 72
+Average change: 0.00768035
+
+
+COL: userAcceleration.y
+ABSOLUTE VALUE MAX/MIN
+Max: 0.472278 line: 51
+Min: 0.000372605 line: 34
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 0.30519 line: 15
+Min: -0.472278 line: 51
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 0.30909 line: 10
+Min change: 0.000249149 line: 72
+Average change: 0.0394102
+
+
+COL: userAcceleration.z
+ABSOLUTE VALUE MAX/MIN
+Max: 0.398021 line: 11
+Min: 0.00417912 line: 68
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 0.0860708 line: 27
+Min: -0.398021 line: 12
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 0.175085 line: 15
+Min change: 0.000367135 line: 72
+Average change: 0.018997
+
+
+COL: gameObject.transform.position.x
+ABSOLUTE VALUE MAX/MIN
+Max: 1.5 line: 1
+Min: 1.30974 line: 71
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 1.5 line: 5
+Min: 1.30974 line: 72
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 0.010823 line: 32
+Min change: 1e-06 line: 72
+Average change: 0.00267977
+
+
+COL: gameObject.transform.position.y
+ABSOLUTE VALUE MAX/MIN
+Max: 1.5 line: 1
+Min: 1.5 line: 1
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 1.5 line: 72
+Min: 1.5 line: 72
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 0 line: 32
+Min change: 1e+06 line: 72
+Average change: 0
+
+
+COL: gameObject.transform.position.z
+ABSOLUTE VALUE MAX/MIN
+Max: 2.50064 line: 72
+Min: 1e+06 line: 0
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 0 line: 72
+Min: -2.50064 line: 72
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 0.040912 line: 20
+Min change: 2e-06 line: 49
+Average change: 0.0211357
+
+
+COL: eulerAngles.x
+ABSOLUTE VALUE MAX/MIN
+Max: 62.7755 line: 44
+Min: 3.30283 line: 4
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 21.0054 line: 49
+Min: -62.7755 line: 44
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 42.6247 line: 48
+Min change: 0.00084 line: 64
+Average change: 1.63141
+
+
+COL: eulerAngles.y
+ABSOLUTE VALUE MAX/MIN
+Max: 15.5422 line: 33
+Min: 0.427068 line: 5
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 15.5422 line: 33
+Min: -0.5711 line: 1
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 11.4686 line: 48
+Min change: 0.00161 line: 60
+Average change: 0.420909
+
+
+COL: eulerAngles.z
+ABSOLUTE VALUE MAX/MIN
+Max: 14.0192 line: 45
+Min: 0.128676 line: 15
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 1.59568 line: 49
+Min: -14.0192 line: 45
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 12.4815 line: 48
+Min change: 0.00097 line: 72
+Average change: 0.456577
+
+
