@@ -294,11 +294,11 @@ int main(int argc, char* argv[]) {
 
 	// creating array of file names so when one thing is changed in .cpp
 	// we can change all of the output files at once
-	int SIZE = 24;
+	int SIZE = 25;
 	string file[SIZE] = {"sitting.txt", "stepping.txt", "step1.txt", "step2.txt",
 		"step3.txt", "step4.txt", "walking.txt", "looking.txt", "footL.txt", "footLU.txt",
 		"footLD.txt", "footR.txt", "footRU.txt", "footRD.txt", "walk1.txt", "walk2.txt",
-		"walk3.txt", "walk4.txt", "sit1.txt", "look1.txt", "headFB.txt", "headD.txt", "headU.txt", "headUD.txt"};
+		"walk3.txt", "walk4.txt", "sit1.txt", "look1.txt", "headFB.txt", "headD.txt", "headU.txt", "headUD.txt", "varying.txt"};
 
 	// creates dynamic array of input and output file paths
 	string* inputs = new string[SIZE];
