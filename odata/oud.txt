@@ -1,0 +1,755 @@
+06-01 23:27:10.807 13352 13367 I Unity   : ACCELERATION_XYZ: -0.7301123 2.86723 2.136066 EULER_ANGLES_XYZ 46.6797 46.6797 46.6797
+06-01 23:27:10.807 13352 13367 I Unity   :
+06-01 23:27:10.807 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.807 13352 13367 I Unity   :
+06-01 23:27:10.807 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:10.807 13352 13367 E Unity   :
+06-01 23:27:10.807 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.807 13352 13367 E Unity   :
+06-01 23:27:10.823 13352 13367 I Unity   : ACCELERATION_XYZ: -0.2545119 5.471277 0.1391577 EULER_ANGLES_XYZ 48.36999 48.36999 48.36999
+06-01 23:27:10.823 13352 13367 I Unity   :
+06-01 23:27:10.823 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.823 13352 13367 I Unity   :
+06-01 23:27:10.824 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:10.824 13352 13367 E Unity   :
+06-01 23:27:10.824 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.824 13352 13367 E Unity   :
+06-01 23:27:10.840 13352 13367 I Unity   : ACCELERATION_XYZ: 0.4336999 6.855857 -2.226909 EULER_ANGLES_XYZ 49.12214 49.12214 49.12214
+06-01 23:27:10.840 13352 13367 I Unity   :
+06-01 23:27:10.840 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.840 13352 13367 I Unity   :
+06-01 23:27:10.840 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:10.840 13352 13367 E Unity   :
+06-01 23:27:10.840 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.840 13352 13367 E Unity   :
+06-01 23:27:10.874 13352 13367 I Unity   : ACCELERATION_XYZ: 1.05674 5.468978 -2.925189 EULER_ANGLES_XYZ 48.54908 48.54908 48.54908
+06-01 23:27:10.874 13352 13367 I Unity   :
+06-01 23:27:10.874 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.874 13352 13367 I Unity   :
+06-01 23:27:10.874 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:10.874 13352 13367 E Unity   :
+06-01 23:27:10.874 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.874 13352 13367 E Unity   :
+06-01 23:27:10.890 13352 13367 I Unity   : ACCELERATION_XYZ: 0.4932742 3.965909 -0.6196026 EULER_ANGLES_XYZ 48.35574 48.35574 48.35574
+06-01 23:27:10.890 13352 13367 I Unity   :
+06-01 23:27:10.890 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.890 13352 13367 I Unity   :
+06-01 23:27:10.890 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:10.890 13352 13367 E Unity   :
+06-01 23:27:10.890 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.890 13352 13367 E Unity   :
+06-01 23:27:10.907 13352 13367 I Unity   : ACCELERATION_XYZ: -0.1273303 3.132346 1.458495 EULER_ANGLES_XYZ 48.43597 48.43597 48.43597
+06-01 23:27:10.907 13352 13367 I Unity   :
+06-01 23:27:10.907 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.907 13352 13367 I Unity   :
+06-01 23:27:10.907 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:10.907 13352 13367 E Unity   :
+06-01 23:27:10.907 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.907 13352 13367 E Unity   :
+06-01 23:27:10.924 13352 13367 I Unity   : ACCELERATION_XYZ: -0.04153132 4.105332 0.7974942 EULER_ANGLES_XYZ 48.05268 48.05268 48.05268
+06-01 23:27:10.924 13352 13367 I Unity   :
+06-01 23:27:10.924 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.924 13352 13367 I Unity   :
+06-01 23:27:10.924 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:10.924 13352 13367 E Unity   :
+06-01 23:27:10.924 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.924 13352 13367 E Unity   :
+06-01 23:27:10.941 13352 13367 I Unity   : ACCELERATION_XYZ: 0.6529192 5.907003 -1.419447 EULER_ANGLES_XYZ 46.74457 46.74457 46.74457
+06-01 23:27:10.941 13352 13367 I Unity   :
+06-01 23:27:10.941 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.941 13352 13367 I Unity   :
+06-01 23:27:10.941 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:10.941 13352 13367 E Unity   :
+06-01 23:27:10.941 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.941 13352 13367 E Unity   :
+06-01 23:27:10.974 13352 13367 I Unity   : ACCELERATION_XYZ: 0.9865673 6.390649 -2.098328 EULER_ANGLES_XYZ 42.26425 42.26425 42.26425
+06-01 23:27:10.974 13352 13367 I Unity   :
+06-01 23:27:10.974 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.974 13352 13367 I Unity   :
+06-01 23:27:10.974 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:10.974 13352 13367 E Unity   :
+06-01 23:27:10.974 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.974 13352 13367 E Unity   :
+06-01 23:27:10.990 13352 13367 I Unity   : ACCELERATION_XYZ: 0.6887196 5.360963 -1.208601 EULER_ANGLES_XYZ 39.57062 39.57062 39.57062
+06-01 23:27:10.990 13352 13367 I Unity   :
+06-01 23:27:10.990 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.990 13352 13367 I Unity   :
+06-01 23:27:10.991 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:10.991 13352 13367 E Unity   :
+06-01 23:27:10.991 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:10.991 13352 13367 E Unity   :
+06-01 23:27:11.007 13352 13367 I Unity   : ACCELERATION_XYZ: 0.4959063 4.856517 -0.6602851 EULER_ANGLES_XYZ 36.65835 36.65835 36.65835
+06-01 23:27:11.007 13352 13367 I Unity   :
+06-01 23:27:11.007 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.007 13352 13367 I Unity   :
+06-01 23:27:11.007 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.007 13352 13367 E Unity   :
+06-01 23:27:11.007 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.007 13352 13367 E Unity   :
+06-01 23:27:11.024 13352 13367 I Unity   : ACCELERATION_XYZ: 0.4249227 4.193249 -0.3950678 EULER_ANGLES_XYZ 33.39699 33.39699 33.39699
+06-01 23:27:11.024 13352 13367 I Unity   :
+06-01 23:27:11.024 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.024 13352 13367 I Unity   :
+06-01 23:27:11.024 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.024 13352 13367 E Unity   :
+06-01 23:27:11.024 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.024 13352 13367 E Unity   :
+06-01 23:27:11.041 13352 13367 I Unity   : ACCELERATION_XYZ: 0.345049 3.78122 -0.1004489 EULER_ANGLES_XYZ 29.82223 29.82223 29.82223
+06-01 23:27:11.041 13352 13367 I Unity   :
+06-01 23:27:11.041 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.041 13352 13367 I Unity   :
+06-01 23:27:11.041 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.041 13352 13367 E Unity   :
+06-01 23:27:11.041 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.041 13352 13367 E Unity   :
+06-01 23:27:11.074 13352 13367 I Unity   : ACCELERATION_XYZ: -0.06807375 3.726758 0.4492829 EULER_ANGLES_XYZ 21.60616 21.60616 21.60616
+06-01 23:27:11.074 13352 13367 I Unity   :
+06-01 23:27:11.074 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.074 13352 13367 I Unity   :
+06-01 23:27:11.075 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.075 13352 13367 E Unity   :
+06-01 23:27:11.075 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.075 13352 13367 E Unity   :
+06-01 23:27:11.090 13352 13367 I Unity   : ACCELERATION_XYZ: -0.1468382 3.928997 0.7095789 EULER_ANGLES_XYZ 16.8585 16.8585 16.8585
+06-01 23:27:11.090 13352 13367 I Unity   :
+06-01 23:27:11.090 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.090 13352 13367 I Unity   :
+06-01 23:27:11.091 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.091 13352 13367 E Unity   :
+06-01 23:27:11.091 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.091 13352 13367 E Unity   :
+06-01 23:27:11.107 13352 13367 I Unity   : ACCELERATION_XYZ: -0.2918705 3.788499 1.449842 EULER_ANGLES_XYZ 11.71053 11.71053 11.71053
+06-01 23:27:11.107 13352 13367 I Unity   :
+06-01 23:27:11.107 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.107 13352 13367 I Unity   :
+06-01 23:27:11.107 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.107 13352 13367 E Unity   :
+06-01 23:27:11.107 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.107 13352 13367 E Unity   :
+06-01 23:27:11.124 13352 13367 I Unity   : ACCELERATION_XYZ: -0.5169945 2.966086 2.362309 EULER_ANGLES_XYZ 6.346721 6.346721 6.346721
+06-01 23:27:11.124 13352 13367 I Unity   :
+06-01 23:27:11.124 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.124 13352 13367 I Unity   :
+06-01 23:27:11.124 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.124 13352 13367 E Unity   :
+06-01 23:27:11.124 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.124 13352 13367 E Unity   :
+06-01 23:27:11.141 13352 13367 I Unity   : ACCELERATION_XYZ: -0.7957069 1.572173 3.27794 EULER_ANGLES_XYZ 0.89351 0.89351 0.89351
+06-01 23:27:11.141 13352 13367 I Unity   :
+06-01 23:27:11.141 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.141 13352 13367 I Unity   :
+06-01 23:27:11.141 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.141 13352 13367 E Unity   :
+06-01 23:27:11.141 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.141 13352 13367 E Unity   :
+06-01 23:27:11.174 13352 13367 I Unity   : ACCELERATION_XYZ: -1.159172 -2.575857 4.185752 EULER_ANGLES_XYZ 350.8696 350.8696 350.8696
+06-01 23:27:11.174 13352 13367 I Unity   :
+06-01 23:27:11.174 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.174 13352 13367 I Unity   :
+06-01 23:27:11.174 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.174 13352 13367 E Unity   :
+06-01 23:27:11.174 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.174 13352 13367 E Unity   :
+06-01 23:27:11.191 13352 13367 I Unity   : ACCELERATION_XYZ: -1.178055 -4.768203 3.479546 EULER_ANGLES_XYZ 346.6728 346.6728 346.6728
+06-01 23:27:11.191 13352 13367 I Unity   :
+06-01 23:27:11.191 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.191 13352 13367 I Unity   :
+06-01 23:27:11.191 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.191 13352 13367 E Unity   :
+06-01 23:27:11.191 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.191 13352 13367 E Unity   :
+06-01 23:27:11.208 13352 13367 I Unity   : ACCELERATION_XYZ: -1.025872 -5.67591 2.208195 EULER_ANGLES_XYZ 343.0079 343.0079 343.0079
+06-01 23:27:11.208 13352 13367 I Unity   :
+06-01 23:27:11.208 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.208 13352 13367 I Unity   :
+06-01 23:27:11.208 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.208 13352 13367 E Unity   :
+06-01 23:27:11.208 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.208 13352 13367 E Unity   :
+06-01 23:27:11.224 13352 13367 I Unity   : ACCELERATION_XYZ: -0.8605449 -5.380319 1.468414 EULER_ANGLES_XYZ 339.8019 339.8019 339.8019
+06-01 23:27:11.224 13352 13367 I Unity   :
+06-01 23:27:11.224 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.224 13352 13367 I Unity   :
+06-01 23:27:11.224 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.224 13352 13367 E Unity   :
+06-01 23:27:11.224 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.224 13352 13367 E Unity   :
+06-01 23:27:11.241 13352 13367 I Unity   : ACCELERATION_XYZ: -0.4528659 -4.565904 0.7631211 EULER_ANGLES_XYZ 336.8022 336.8022 336.8022
+06-01 23:27:11.241 13352 13367 I Unity   :
+06-01 23:27:11.241 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.241 13352 13367 I Unity   :
+06-01 23:27:11.242 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.242 13352 13367 E Unity   :
+06-01 23:27:11.242 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.242 13352 13367 E Unity   :
+06-01 23:27:11.259 13352 13367 I Unity   : ACCELERATION_XYZ: -0.04460709 -3.487627 0.3391434 EULER_ANGLES_XYZ 333.8384 333.8384 333.8384
+06-01 23:27:11.259 13352 13367 I Unity   :
+06-01 23:27:11.259 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.259 13352 13367 I Unity   :
+06-01 23:27:11.259 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.259 13352 13367 E Unity   :
+06-01 23:27:11.259 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.259 13352 13367 E Unity   :
+06-01 23:27:11.291 13352 13367 I Unity   : ACCELERATION_XYZ: -0.171835 -1.543489 0.7206548 EULER_ANGLES_XYZ 327.71 327.71 327.71
+06-01 23:27:11.291 13352 13367 I Unity   :
+06-01 23:27:11.291 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.291 13352 13367 I Unity   :
+06-01 23:27:11.291 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.291 13352 13367 E Unity   :
+06-01 23:27:11.291 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.291 13352 13367 E Unity   :
+06-01 23:27:11.308 13352 13367 I Unity   : ACCELERATION_XYZ: -0.3567957 -1.693282 0.97105 EULER_ANGLES_XYZ 324.7563 324.7563 324.7563
+06-01 23:27:11.308 13352 13367 I Unity   :
+06-01 23:27:11.308 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.308 13352 13367 I Unity   :
+06-01 23:27:11.308 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.308 13352 13367 E Unity   :
+06-01 23:27:11.308 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.308 13352 13367 E Unity   :
+06-01 23:27:11.325 13352 13367 I Unity   : ACCELERATION_XYZ: -0.4300692 -1.870009 0.422801 EULER_ANGLES_XYZ 321.9516 321.9516 321.9516
+06-01 23:27:11.325 13352 13367 I Unity   :
+06-01 23:27:11.325 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.325 13352 13367 I Unity   :
+06-01 23:27:11.325 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.325 13352 13367 E Unity   :
+06-01 23:27:11.325 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.325 13352 13367 E Unity   :
+06-01 23:27:11.342 13352 13367 I Unity   : ACCELERATION_XYZ: -0.3360787 -1.718921 0.1556979 EULER_ANGLES_XYZ 319.1434 319.1434 319.1434
+06-01 23:27:11.342 13352 13367 I Unity   :
+06-01 23:27:11.342 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.342 13352 13367 I Unity   :
+06-01 23:27:11.342 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.342 13352 13367 E Unity   :
+06-01 23:27:11.342 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.342 13352 13367 E Unity   :
+06-01 23:27:11.374 13352 13367 I Unity   : ACCELERATION_XYZ: -0.142224 -2.033373 0.2907749 EULER_ANGLES_XYZ 314.1 314.1 314.1
+06-01 23:27:11.374 13352 13367 I Unity   :
+06-01 23:27:11.374 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.374 13352 13367 I Unity   :
+06-01 23:27:11.375 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.375 13352 13367 E Unity   :
+06-01 23:27:11.375 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.375 13352 13367 E Unity   :
+06-01 23:27:11.392 13352 13367 I Unity   : ACCELERATION_XYZ: 0.3694334 -2.570874 -1.125038 EULER_ANGLES_XYZ 312.5425 312.5425 312.5425
+06-01 23:27:11.392 13352 13367 I Unity   :
+06-01 23:27:11.392 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.392 13352 13367 I Unity   :
+06-01 23:27:11.392 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.392 13352 13367 E Unity   :
+06-01 23:27:11.392 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.392 13352 13367 E Unity   :
+06-01 23:27:11.408 13352 13367 I Unity   : ACCELERATION_XYZ: 0.6703794 -2.800628 -2.510759 EULER_ANGLES_XYZ 311.537 311.537 311.537
+06-01 23:27:11.408 13352 13367 I Unity   :
+06-01 23:27:11.408 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.408 13352 13367 I Unity   :
+06-01 23:27:11.408 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.408 13352 13367 E Unity   :
+06-01 23:27:11.408 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.408 13352 13367 E Unity   :
+06-01 23:27:11.425 13352 13367 I Unity   : ACCELERATION_XYZ: 0.6366029 -2.839415 -3.250705 EULER_ANGLES_XYZ 310.8636 310.8636 310.8636
+06-01 23:27:11.425 13352 13367 I Unity   :
+06-01 23:27:11.425 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.425 13352 13367 I Unity   :
+06-01 23:27:11.425 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.425 13352 13367 E Unity   :
+06-01 23:27:11.425 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.425 13352 13367 E Unity   :
+06-01 23:27:11.442 13352 13367 I Unity   : ACCELERATION_XYZ: 0.6747507 -2.270443 -3.469306 EULER_ANGLES_XYZ 310.5143 310.5143 310.5143
+06-01 23:27:11.442 13352 13367 I Unity   :
+06-01 23:27:11.442 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.442 13352 13367 I Unity   :
+06-01 23:27:11.442 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.442 13352 13367 E Unity   :
+06-01 23:27:11.442 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.442 13352 13367 E Unity   :
+06-01 23:27:11.475 13352 13367 I Unity   : ACCELERATION_XYZ: 1.215427 -0.6484194 -3.251608 EULER_ANGLES_XYZ 310.2925 310.2925 310.2925
+06-01 23:27:11.475 13352 13367 I Unity   :
+06-01 23:27:11.475 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.475 13352 13367 I Unity   :
+06-01 23:27:11.475 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.475 13352 13367 E Unity   :
+06-01 23:27:11.475 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.475 13352 13367 E Unity   :
+06-01 23:27:11.492 13352 13367 I Unity   : ACCELERATION_XYZ: 1.457337 -0.386075 -3.280747 EULER_ANGLES_XYZ 310.6696 310.6696 310.6696
+06-01 23:27:11.492 13352 13367 I Unity   :
+06-01 23:27:11.492 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.492 13352 13367 I Unity   :
+06-01 23:27:11.492 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.492 13352 13367 E Unity   :
+06-01 23:27:11.492 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.492 13352 13367 E Unity   :
+06-01 23:27:11.508 13352 13367 I Unity   : ACCELERATION_XYZ: 1.556304 -0.5223112 -3.463164 EULER_ANGLES_XYZ 311.3586 311.3586 311.3586
+06-01 23:27:11.508 13352 13367 I Unity   :
+06-01 23:27:11.508 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.508 13352 13367 I Unity   :
+06-01 23:27:11.508 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.508 13352 13367 E Unity   :
+06-01 23:27:11.508 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.508 13352 13367 E Unity   :
+06-01 23:27:11.525 13352 13367 I Unity   : ACCELERATION_XYZ: 1.666565 -0.8097658 -3.639814 EULER_ANGLES_XYZ 312.5565 312.5565 312.5565
+06-01 23:27:11.525 13352 13367 I Unity   :
+06-01 23:27:11.525 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.525 13352 13367 I Unity   :
+06-01 23:27:11.526 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.526 13352 13367 E Unity   :
+06-01 23:27:11.526 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.526 13352 13367 E Unity   :
+06-01 23:27:11.542 13352 13367 I Unity   : ACCELERATION_XYZ: 1.470338 -1.237481 -3.595182 EULER_ANGLES_XYZ 314.1817 314.1817 314.1817
+06-01 23:27:11.542 13352 13367 I Unity   :
+06-01 23:27:11.542 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.542 13352 13367 I Unity   :
+06-01 23:27:11.542 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.542 13352 13367 E Unity   :
+06-01 23:27:11.542 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.542 13352 13367 E Unity   :
+06-01 23:27:11.575 13352 13367 I Unity   : ACCELERATION_XYZ: 1.068159 -1.755304 -2.863035 EULER_ANGLES_XYZ 318.7852 318.7852 318.7852
+06-01 23:27:11.575 13352 13367 I Unity   :
+06-01 23:27:11.575 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.575 13352 13367 I Unity   :
+06-01 23:27:11.575 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.575 13352 13367 E Unity   :
+06-01 23:27:11.575 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.575 13352 13367 E Unity   :
+06-01 23:27:11.592 13352 13367 I Unity   : ACCELERATION_XYZ: 0.9116173 -1.989545 -2.316585 EULER_ANGLES_XYZ 321.5604 321.5604 321.5604
+06-01 23:27:11.592 13352 13367 I Unity   :
+06-01 23:27:11.592 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.592 13352 13367 I Unity   :
+06-01 23:27:11.592 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.592 13352 13367 E Unity   :
+06-01 23:27:11.592 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.592 13352 13367 E Unity   :
+06-01 23:27:11.609 13352 13367 I Unity   : ACCELERATION_XYZ: 0.7260103 -2.168814 -1.815567 EULER_ANGLES_XYZ 324.6745 324.6745 324.6745
+06-01 23:27:11.609 13352 13367 I Unity   :
+06-01 23:27:11.609 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.609 13352 13367 I Unity   :
+06-01 23:27:11.609 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.609 13352 13367 E Unity   :
+06-01 23:27:11.609 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.609 13352 13367 E Unity   :
+06-01 23:27:11.626 13352 13367 I Unity   : ACCELERATION_XYZ: 0.5416505 -2.313425 -1.318337 EULER_ANGLES_XYZ 328.0725 328.0725 328.0725
+06-01 23:27:11.626 13352 13367 I Unity   :
+06-01 23:27:11.626 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.626 13352 13367 I Unity   :
+06-01 23:27:11.626 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.626 13352 13367 E Unity   :
+06-01 23:27:11.626 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.626 13352 13367 E Unity   :
+06-01 23:27:11.644 13352 13367 I Unity   : ACCELERATION_XYZ: 0.3348584 -2.455201 -0.7455029 EULER_ANGLES_XYZ 331.7142 331.7142 331.7142
+06-01 23:27:11.644 13352 13367 I Unity   :
+06-01 23:27:11.644 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.644 13352 13367 I Unity   :
+06-01 23:27:11.645 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.645 13352 13367 E Unity   :
+06-01 23:27:11.645 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.645 13352 13367 E Unity   :
+06-01 23:27:11.662 13352 13367 I Unity   : ACCELERATION_XYZ: 0.06275678 -2.728854 -0.008350415 EULER_ANGLES_XYZ 335.4399 335.4399 335.4399
+06-01 23:27:11.662 13352 13367 I Unity   :
+06-01 23:27:11.662 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.662 13352 13367 I Unity   :
+06-01 23:27:11.662 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.662 13352 13367 E Unity   :
+06-01 23:27:11.662 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.662 13352 13367 E Unity   :
+06-01 23:27:11.692 13352 13367 I Unity   : ACCELERATION_XYZ: -0.2550239 -3.1703 1.176878 EULER_ANGLES_XYZ 343.3766 343.3766 343.3766
+06-01 23:27:11.692 13352 13367 I Unity   :
+06-01 23:27:11.692 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.692 13352 13367 I Unity   :
+06-01 23:27:11.692 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.692 13352 13367 E Unity   :
+06-01 23:27:11.692 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.692 13352 13367 E Unity   :
+06-01 23:27:11.709 13352 13367 I Unity   : ACCELERATION_XYZ: -0.4946398 -3.528635 1.583339 EULER_ANGLES_XYZ 347.6085 347.6085 347.6085
+06-01 23:27:11.709 13352 13367 I Unity   :
+06-01 23:27:11.709 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.709 13352 13367 I Unity   :
+06-01 23:27:11.709 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.709 13352 13367 E Unity   :
+06-01 23:27:11.709 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.709 13352 13367 E Unity   :
+06-01 23:27:11.726 13352 13367 I Unity   : ACCELERATION_XYZ: -0.8002207 -3.416528 2.017451 EULER_ANGLES_XYZ 351.9825 351.9825 351.9825
+06-01 23:27:11.726 13352 13367 I Unity   :
+06-01 23:27:11.726 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.726 13352 13367 I Unity   :
+06-01 23:27:11.726 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.726 13352 13367 E Unity   :
+06-01 23:27:11.726 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.726 13352 13367 E Unity   :
+06-01 23:27:11.742 13352 13367 I Unity   : ACCELERATION_XYZ: -0.8166689 -2.769358 2.24884 EULER_ANGLES_XYZ 356.4384 356.4384 356.4384
+06-01 23:27:11.742 13352 13367 I Unity   :
+06-01 23:27:11.742 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.742 13352 13367 I Unity   :
+06-01 23:27:11.742 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.742 13352 13367 E Unity   :
+06-01 23:27:11.742 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.742 13352 13367 E Unity   :
+06-01 23:27:11.759 13352 13367 I Unity   : ACCELERATION_XYZ: -0.8460784 -1.552756 2.37838 EULER_ANGLES_XYZ 0.8023042 0.8023042 0.8023042
+06-01 23:27:11.759 13352 13367 I Unity   :
+06-01 23:27:11.759 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.759 13352 13367 I Unity   :
+06-01 23:27:11.759 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.759 13352 13367 E Unity   :
+06-01 23:27:11.759 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.759 13352 13367 E Unity   :
+06-01 23:27:11.792 13352 13367 I Unity   : ACCELERATION_XYZ: -0.7364366 -1.446156 2.598394 EULER_ANGLES_XYZ 9.472373 9.472373 9.472373
+06-01 23:27:11.792 13352 13367 I Unity   :
+06-01 23:27:11.792 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.792 13352 13367 I Unity   :
+06-01 23:27:11.792 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.792 13352 13367 E Unity   :
+06-01 23:27:11.792 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.792 13352 13367 E Unity   :
+06-01 23:27:11.809 13352 13367 I Unity   : ACCELERATION_XYZ: -1.032152 -2.765618 3.008814 EULER_ANGLES_XYZ 14.21285 14.21285 14.21285
+06-01 23:27:11.809 13352 13367 I Unity   :
+06-01 23:27:11.809 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.809 13352 13367 I Unity   :
+06-01 23:27:11.809 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.809 13352 13367 E Unity   :
+06-01 23:27:11.809 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.809 13352 13367 E Unity   :
+06-01 23:27:11.826 13352 13367 I Unity   : ACCELERATION_XYZ: -1.251833 -1.20363 2.831626 EULER_ANGLES_XYZ 18.51996 18.51996 18.51996
+06-01 23:27:11.826 13352 13367 I Unity   :
+06-01 23:27:11.826 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.826 13352 13367 I Unity   :
+06-01 23:27:11.826 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.826 13352 13367 E Unity   :
+06-01 23:27:11.826 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.826 13352 13367 E Unity   :
+06-01 23:27:11.842 13352 13367 I Unity   : ACCELERATION_XYZ: -1.206542 1.408179 2.881581 EULER_ANGLES_XYZ 22.40235 22.40235 22.40235
+06-01 23:27:11.842 13352 13367 I Unity   :
+06-01 23:27:11.842 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.842 13352 13367 I Unity   :
+06-01 23:27:11.842 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.842 13352 13367 E Unity   :
+06-01 23:27:11.842 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.842 13352 13367 E Unity   :
+06-01 23:27:11.859 13352 13367 I Unity   : ACCELERATION_XYZ: -0.5839522 2.754598 1.765283 EULER_ANGLES_XYZ 25.80756 25.80756 25.80756
+06-01 23:27:11.859 13352 13367 I Unity   :
+06-01 23:27:11.859 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.859 13352 13367 I Unity   :
+06-01 23:27:11.859 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.859 13352 13367 E Unity   :
+06-01 23:27:11.859 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.859 13352 13367 E Unity   :
+06-01 23:27:11.893 13352 13367 I Unity   : ACCELERATION_XYZ: 0.0006680787 2.021932 0.1862245 EULER_ANGLES_XYZ 31.49365 31.49365 31.49365
+06-01 23:27:11.893 13352 13367 I Unity   :
+06-01 23:27:11.893 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.893 13352 13367 I Unity   :
+06-01 23:27:11.893 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.893 13352 13367 E Unity   :
+06-01 23:27:11.893 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.893 13352 13367 E Unity   :
+06-01 23:27:11.910 13352 13367 I Unity   : ACCELERATION_XYZ: -0.457242 -0.2929277 0.8588215 EULER_ANGLES_XYZ 34.36491 34.36491 34.36491
+06-01 23:27:11.910 13352 13367 I Unity   :
+06-01 23:27:11.910 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.910 13352 13367 I Unity   :
+06-01 23:27:11.910 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.910 13352 13367 E Unity   :
+06-01 23:27:11.910 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.910 13352 13367 E Unity   :
+06-01 23:27:11.927 13352 13367 I Unity   : ACCELERATION_XYZ: -1.220657 -1.049603 2.688253 EULER_ANGLES_XYZ 37.67862 37.67862 37.67862
+06-01 23:27:11.927 13352 13367 I Unity   :
+06-01 23:27:11.927 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.927 13352 13367 I Unity   :
+06-01 23:27:11.927 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.927 13352 13367 E Unity   :
+06-01 23:27:11.927 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.927 13352 13367 E Unity   :
+06-01 23:27:11.943 13352 13367 I Unity   : ACCELERATION_XYZ: -1.746655 -0.177721 3.935989 EULER_ANGLES_XYZ 41.53079 41.53079 41.53079
+06-01 23:27:11.943 13352 13367 I Unity   :
+06-01 23:27:11.943 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.943 13352 13367 I Unity   :
+06-01 23:27:11.943 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.943 13352 13367 E Unity   :
+06-01 23:27:11.943 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.943 13352 13367 E Unity   :
+06-01 23:27:11.959 13352 13367 I Unity   : ACCELERATION_XYZ: -0.9823059 2.731321 1.502842 EULER_ANGLES_XYZ 44.35748 44.35748 44.35748
+06-01 23:27:11.959 13352 13367 I Unity   :
+06-01 23:27:11.959 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.959 13352 13367 I Unity   :
+06-01 23:27:11.960 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.960 13352 13367 E Unity   :
+06-01 23:27:11.960 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.960 13352 13367 E Unity   :
+06-01 23:27:11.993 13352 13367 I Unity   : ACCELERATION_XYZ: 0.9148256 4.970391 -2.661097 EULER_ANGLES_XYZ 47.3375 47.3375 47.3375
+06-01 23:27:11.993 13352 13367 I Unity   :
+06-01 23:27:11.993 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.993 13352 13367 I Unity   :
+06-01 23:27:11.993 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:11.993 13352 13367 E Unity   :
+06-01 23:27:11.993 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:11.993 13352 13367 E Unity   :
+06-01 23:27:12.010 13352 13367 I Unity   : ACCELERATION_XYZ: 0.3399673 1.840398 -0.956546 EULER_ANGLES_XYZ 48.79216 48.79216 48.79216
+06-01 23:27:12.010 13352 13367 I Unity   :
+06-01 23:27:12.010 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.010 13352 13367 I Unity   :
+06-01 23:27:12.010 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.010 13352 13367 E Unity   :
+06-01 23:27:12.010 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.010 13352 13367 E Unity   :
+06-01 23:27:12.026 13352 13367 I Unity   : ACCELERATION_XYZ: -0.7214556 0.468317 1.934817 EULER_ANGLES_XYZ 50.85737 50.85737 50.85737
+06-01 23:27:12.026 13352 13367 I Unity   :
+06-01 23:27:12.026 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.026 13352 13367 I Unity   :
+06-01 23:27:12.026 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.026 13352 13367 E Unity   :
+06-01 23:27:12.026 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.026 13352 13367 E Unity   :
+06-01 23:27:12.043 13352 13367 I Unity   : ACCELERATION_XYZ: -1.20259 1.323068 3.748033 EULER_ANGLES_XYZ 53.45408 53.45408 53.45408
+06-01 23:27:12.043 13352 13367 I Unity   :
+06-01 23:27:12.043 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.043 13352 13367 I Unity   :
+06-01 23:27:12.043 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.043 13352 13367 E Unity   :
+06-01 23:27:12.043 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.043 13352 13367 E Unity   :
+06-01 23:27:12.060 13352 13367 I Unity   : ACCELERATION_XYZ: -0.1633589 3.500504 1.96761 EULER_ANGLES_XYZ 55.48329 55.48329 55.48329
+06-01 23:27:12.060 13352 13367 I Unity   :
+06-01 23:27:12.060 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.060 13352 13367 I Unity   :
+06-01 23:27:12.060 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.060 13352 13367 E Unity   :
+06-01 23:27:12.060 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.060 13352 13367 E Unity   :
+06-01 23:27:12.093 13352 13367 I Unity   : ACCELERATION_XYZ: 2.072803 7.677466 -4.194721 EULER_ANGLES_XYZ 55.89642 55.89642 55.89642
+06-01 23:27:12.093 13352 13367 I Unity   :
+06-01 23:27:12.093 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.093 13352 13367 I Unity   :
+06-01 23:27:12.093 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.093 13352 13367 E Unity   :
+06-01 23:27:12.093 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.093 13352 13367 E Unity   :
+06-01 23:27:12.110 13352 13367 I Unity   : ACCELERATION_XYZ: 1.410627 7.92258 -3.866194 EULER_ANGLES_XYZ 55.11755 55.11755 55.11755
+06-01 23:27:12.110 13352 13367 I Unity   :
+06-01 23:27:12.110 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.110 13352 13367 I Unity   :
+06-01 23:27:12.110 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.110 13352 13367 E Unity   :
+06-01 23:27:12.110 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.110 13352 13367 E Unity   :
+06-01 23:27:12.126 13352 13367 I Unity   : ACCELERATION_XYZ: 0.6583741 7.434777 -3.178079 EULER_ANGLES_XYZ 53.86258 53.86258 53.86258
+06-01 23:27:12.126 13352 13367 I Unity   :
+06-01 23:27:12.126 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.126 13352 13367 I Unity   :
+06-01 23:27:12.126 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.126 13352 13367 E Unity   :
+06-01 23:27:12.126 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.126 13352 13367 E Unity   :
+06-01 23:27:12.143 13352 13367 I Unity   : ACCELERATION_XYZ: 0.4350573 7.259831 -2.607135 EULER_ANGLES_XYZ 52.15365 52.15365 52.15365
+06-01 23:27:12.143 13352 13367 I Unity   :
+06-01 23:27:12.143 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.143 13352 13367 I Unity   :
+06-01 23:27:12.143 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.143 13352 13367 E Unity   :
+06-01 23:27:12.143 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.143 13352 13367 E Unity   :
+06-01 23:27:12.160 13352 13367 I Unity   : ACCELERATION_XYZ: 0.3449544 6.285991 -2.057225 EULER_ANGLES_XYZ 50.17767 50.17767 50.17767
+06-01 23:27:12.160 13352 13367 I Unity   :
+06-01 23:27:12.160 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.160 13352 13367 I Unity   :
+06-01 23:27:12.160 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.160 13352 13367 E Unity   :
+06-01 23:27:12.160 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.160 13352 13367 E Unity   :
+06-01 23:27:12.194 13352 13367 I Unity   : ACCELERATION_XYZ: 0.03241277 4.143254 -0.882359 EULER_ANGLES_XYZ 45.6442 45.6442 45.6442
+06-01 23:27:12.194 13352 13367 I Unity   :
+06-01 23:27:12.194 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.194 13352 13367 I Unity   :
+06-01 23:27:12.194 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.194 13352 13367 E Unity   :
+06-01 23:27:12.194 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.194 13352 13367 E Unity   :
+06-01 23:27:12.211 13352 13367 I Unity   : ACCELERATION_XYZ: -0.2965676 3.494548 -0.3696752 EULER_ANGLES_XYZ 43.11329 43.11329 43.11329
+06-01 23:27:12.211 13352 13367 I Unity   :
+06-01 23:27:12.211 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.211 13352 13367 I Unity   :
+06-01 23:27:12.211 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.211 13352 13367 E Unity   :
+06-01 23:27:12.211 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.211 13352 13367 E Unity   :
+06-01 23:27:12.227 13352 13367 I Unity   : ACCELERATION_XYZ: -0.2961861 3.81799 -0.6402525 EULER_ANGLES_XYZ 40.25394 40.25394 40.25394
+06-01 23:27:12.227 13352 13367 I Unity   :
+06-01 23:27:12.227 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.227 13352 13367 I Unity   :
+06-01 23:27:12.227 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.227 13352 13367 E Unity   :
+06-01 23:27:12.227 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.227 13352 13367 E Unity   :
+06-01 23:27:12.244 13352 13367 I Unity   : ACCELERATION_XYZ: 0.06612819 4.707773 -1.34547 EULER_ANGLES_XYZ 36.80429 36.80429 36.80429
+06-01 23:27:12.244 13352 13367 I Unity   :
+06-01 23:27:12.244 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.244 13352 13367 I Unity   :
+06-01 23:27:12.244 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.244 13352 13367 E Unity   :
+06-01 23:27:12.244 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.244 13352 13367 E Unity   :
+06-01 23:27:12.260 13352 13367 I Unity   : ACCELERATION_XYZ: 0.2636839 5.230929 -1.504889 EULER_ANGLES_XYZ 32.7275 32.7275 32.7275
+06-01 23:27:12.260 13352 13367 I Unity   :
+06-01 23:27:12.260 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.260 13352 13367 I Unity   :
+06-01 23:27:12.260 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.260 13352 13367 E Unity   :
+06-01 23:27:12.260 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.260 13352 13367 E Unity   :
+06-01 23:27:12.294 13352 13367 I Unity   : ACCELERATION_XYZ: -0.06638116 4.566326 -0.1002305 EULER_ANGLES_XYZ 23.26611 23.26611 23.26611
+06-01 23:27:12.294 13352 13367 I Unity   :
+06-01 23:27:12.294 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.294 13352 13367 I Unity   :
+06-01 23:27:12.294 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.294 13352 13367 E Unity   :
+06-01 23:27:12.294 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.294 13352 13367 E Unity   :
+06-01 23:27:12.310 13352 13367 I Unity   : ACCELERATION_XYZ: -0.3398037 3.449069 1.143367 EULER_ANGLES_XYZ 18.12622 18.12622 18.12622
+06-01 23:27:12.310 13352 13367 I Unity   :
+06-01 23:27:12.310 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.310 13352 13367 I Unity   :
+06-01 23:27:12.310 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.310 13352 13367 E Unity   :
+06-01 23:27:12.310 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.310 13352 13367 E Unity   :
+06-01 23:27:12.327 13352 13367 I Unity   : ACCELERATION_XYZ: -0.526198 2.454238 2.149751 EULER_ANGLES_XYZ 12.87478 12.87478 12.87478
+06-01 23:27:12.327 13352 13367 I Unity   :
+06-01 23:27:12.327 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.327 13352 13367 I Unity   :
+06-01 23:27:12.327 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.327 13352 13367 E Unity   :
+06-01 23:27:12.327 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.327 13352 13367 E Unity   :
+06-01 23:27:12.344 13352 13367 I Unity   : ACCELERATION_XYZ: -0.8675568 1.005031 2.976851 EULER_ANGLES_XYZ 7.66591 7.66591 7.66591
+06-01 23:27:12.344 13352 13367 I Unity   :
+06-01 23:27:12.344 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.344 13352 13367 I Unity   :
+06-01 23:27:12.344 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.344 13352 13367 E Unity   :
+06-01 23:27:12.344 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.344 13352 13367 E Unity   :
+06-01 23:27:12.352 13352 13403 I VrApi   : FPS=48,Prd=44ms,Tear=0,Early=46,Stale=2,VSnc=1,Lat=1,Fov=0,CPU2/GPU=2/2,1132/315MHz,OC=F,TA=E/0/0,SP=F/N/N,Mem=1017MHz,Free=1144MB,PSM=0,PLS=0,Temp=25.0C/0.0C
+06-01 23:27:12.360 13352 13367 I Unity   : ACCELERATION_XYZ: -1.049564 -0.6376123 3.606696 EULER_ANGLES_XYZ 2.675169 2.675169 2.675169
+06-01 23:27:12.360 13352 13367 I Unity   :
+06-01 23:27:12.360 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.360 13352 13367 I Unity   :
+06-01 23:27:12.360 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.360 13352 13367 E Unity   :
+06-01 23:27:12.360 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.360 13352 13367 E Unity   :
+06-01 23:27:12.371 13352 13404 I UtilPoller: GPU Util 0.248721 / CPU Util 0.580000 (avg 0.511222)
+06-01 23:27:12.394 13352 13367 I Unity   : ACCELERATION_XYZ: -1.022211 -2.50996 3.87262 EULER_ANGLES_XYZ 353.3225 353.3225 353.3225
+06-01 23:27:12.394 13352 13367 I Unity   :
+06-01 23:27:12.394 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.394 13352 13367 I Unity   :
+06-01 23:27:12.395 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.395 13352 13367 E Unity   :
+06-01 23:27:12.395 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.395 13352 13367 E Unity   :
+06-01 23:27:12.410 13352 13367 I Unity   : ACCELERATION_XYZ: -0.8437045 -3.124449 3.58478 EULER_ANGLES_XYZ 348.9362 348.9362 348.9362
+06-01 23:27:12.410 13352 13367 I Unity   :
+06-01 23:27:12.410 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.410 13352 13367 I Unity   :
+06-01 23:27:12.411 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.411 13352 13367 E Unity   :
+06-01 23:27:12.411 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.411 13352 13367 E Unity   :
+06-01 23:27:12.427 13352 13367 I Unity   : ACCELERATION_XYZ: -0.6752272 -3.635399 2.945734 EULER_ANGLES_XYZ 344.7241 344.7241 344.7241
+06-01 23:27:12.427 13352 13367 I Unity   :
+06-01 23:27:12.427 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.427 13352 13367 I Unity   :
+06-01 23:27:12.427 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.427 13352 13367 E Unity   :
+06-01 23:27:12.427 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.427 13352 13367 E Unity   :
+06-01 23:27:12.444 13352 13367 I Unity   : ACCELERATION_XYZ: -0.6060206 -3.783617 2.209347 EULER_ANGLES_XYZ 340.8013 340.8013 340.8013
+06-01 23:27:12.444 13352 13367 I Unity   :
+06-01 23:27:12.444 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.444 13352 13367 I Unity   :
+06-01 23:27:12.444 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.444 13352 13367 E Unity   :
+06-01 23:27:12.444 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.444 13352 13367 E Unity   :
+06-01 23:27:12.461 13352 13367 I Unity   : ACCELERATION_XYZ: -0.3829108 -3.115553 1.249197 EULER_ANGLES_XYZ 337.0439 337.0439 337.0439
+06-01 23:27:12.461 13352 13367 I Unity   :
+06-01 23:27:12.461 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.461 13352 13367 I Unity   :
+06-01 23:27:12.461 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.461 13352 13367 E Unity   :
+06-01 23:27:12.461 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.461 13352 13367 E Unity   :
+06-01 23:27:12.494 13352 13367 I Unity   : ACCELERATION_XYZ: -0.1254375 -3.514477 1.132354 EULER_ANGLES_XYZ 330.037 330.037 330.037
+06-01 23:27:12.494 13352 13367 I Unity   :
+06-01 23:27:12.494 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.494 13352 13367 I Unity   :
+06-01 23:27:12.495 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.495 13352 13367 E Unity   :
+06-01 23:27:12.495 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.495 13352 13367 E Unity   :
+06-01 23:27:12.511 13352 13367 I Unity   : ACCELERATION_XYZ: 0.08347842 -3.04703 0.4316652 EULER_ANGLES_XYZ 326.5949 326.5949 326.5949
+06-01 23:27:12.511 13352 13367 I Unity   :
+06-01 23:27:12.511 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.511 13352 13367 I Unity   :
+06-01 23:27:12.511 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.511 13352 13367 E Unity   :
+06-01 23:27:12.511 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.511 13352 13367 E Unity   :
+06-01 23:27:12.527 13352 13367 I Unity   : ACCELERATION_XYZ: -0.06252504 -2.58672 0.729133 EULER_ANGLES_XYZ 323.2716 323.2716 323.2716
+06-01 23:27:12.527 13352 13367 I Unity   :
+06-01 23:27:12.527 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.527 13352 13367 I Unity   :
+06-01 23:27:12.528 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.528 13352 13367 E Unity   :
+06-01 23:27:12.528 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.528 13352 13367 E Unity   :
+06-01 23:27:12.545 13352 13367 I Unity   : ACCELERATION_XYZ: -0.2810406 -2.490156 0.6856666 EULER_ANGLES_XYZ 320.0889 320.0889 320.0889
+06-01 23:27:12.545 13352 13367 I Unity   :
+06-01 23:27:12.545 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.545 13352 13367 I Unity   :
+06-01 23:27:12.545 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.545 13352 13367 E Unity   :
+06-01 23:27:12.545 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.545 13352 13367 E Unity   :
+06-01 23:27:12.561 13352 13367 I Unity   : ACCELERATION_XYZ: -0.5495063 -3.148202 0.4252147 EULER_ANGLES_XYZ 317.2271 317.2271 317.2271
+06-01 23:27:12.561 13352 13367 I Unity   :
+06-01 23:27:12.561 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.561 13352 13367 I Unity   :
+06-01 23:27:12.561 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.561 13352 13367 E Unity   :
+06-01 23:27:12.561 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.561 13352 13367 E Unity   :
+06-01 23:27:12.595 13352 13367 I Unity   : ACCELERATION_XYZ: -0.3024062 -3.108203 -1.27713 EULER_ANGLES_XYZ 312.7826 312.7826 312.7826
+06-01 23:27:12.595 13352 13367 I Unity   :
+06-01 23:27:12.595 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.595 13352 13367 I Unity   :
+06-01 23:27:12.595 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.595 13352 13367 E Unity   :
+06-01 23:27:12.595 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.595 13352 13367 E Unity   :
+06-01 23:27:12.611 13352 13367 I Unity   : ACCELERATION_XYZ: -0.0175238 -2.536704 -1.368301 EULER_ANGLES_XYZ 311.0346 311.0346 311.0346
+06-01 23:27:12.611 13352 13367 I Unity   :
+06-01 23:27:12.611 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.611 13352 13367 I Unity   :
+06-01 23:27:12.611 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.611 13352 13367 E Unity   :
+06-01 23:27:12.611 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.611 13352 13367 E Unity   :
+06-01 23:27:12.628 13352 13367 I Unity   : ACCELERATION_XYZ: 0.5013915 -1.728867 -1.588091 EULER_ANGLES_XYZ 309.5679 309.5679 309.5679
+06-01 23:27:12.628 13352 13367 I Unity   :
+06-01 23:27:12.628 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.628 13352 13367 I Unity   :
+06-01 23:27:12.628 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.628 13352 13367 E Unity   :
+06-01 23:27:12.628 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.628 13352 13367 E Unity   :
+06-01 23:27:12.644 13352 13367 I Unity   : ACCELERATION_XYZ: 0.9866772 -1.254355 -2.334824 EULER_ANGLES_XYZ 308.4125 308.4125 308.4125
+06-01 23:27:12.644 13352 13367 I Unity   :
+06-01 23:27:12.644 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.644 13352 13367 I Unity   :
+06-01 23:27:12.645 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.645 13352 13367 E Unity   :
+06-01 23:27:12.645 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.645 13352 13367 E Unity   :
+06-01 23:27:12.662 13352 13367 I Unity   : ACCELERATION_XYZ: 1.215095 -1.001269 -3.356614 EULER_ANGLES_XYZ 307.7646 307.7646 307.7646
+06-01 23:27:12.662 13352 13367 I Unity   :
+06-01 23:27:12.662 13352 13367 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.662 13352 13367 I Unity   :
+06-01 23:27:12.662 13352 13367 E Unity   : NetworkClient Send when not connected to a server
+06-01 23:27:12.662 13352 13367 E Unity   :
+06-01 23:27:12.662 13352 13367 E Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+06-01 23:27:12.662 13352 13367 E Unity   :
+06-01 23:27:12.695 13352 13367 I Unity   : ACCELERATION_XYZ: 1.002976 -1.093391 -4.46322 EULER_ANGLES_XYZ 307.8669 307.8669 307.8669

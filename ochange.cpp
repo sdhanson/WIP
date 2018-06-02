@@ -11,9 +11,9 @@
 using namespace std;
 
 // global variable for column names 
-string colNames[] = {"Date", "Time", "Delta Time", "Mouse Button", "userAcceleration.x", "userAcceleration.y", "userAcceleration.z",
-	"gameObject.transform.position.x", "gameObject.transform.position.y", "gameObject.transform.position.z", "eulerAngles.x", "eulerAngles.y",
-	"eulerAngles.z"};
+string colNames[] = {"Date", "Time", "Rand1", "Rand2", "letter", "Unity", "colon",
+	"Acceleration marker", "accel.x", "accel.y", "accel.z", "Euler marker",
+	"euler.x", "euler.y", "euler.z"};
 
 void gyroPairs(ifstream& input) {
 	// declaring stringstream variables
@@ -108,7 +108,7 @@ void absMaxMin(ifstream& input, int col, ofstream& output) {
 
 		// converting from 360 to 180 so 359 --> 1 is now -1 --> 1
 		// only for eulerangle columns
-		if(col >= 9) {
+		if(col >= 12) {
 			if((gyro_y > 180) || (gyro_y < -180)) {
 				gyro_y -= 360;
 			}
@@ -169,7 +169,7 @@ void signMaxMin(ifstream& input, int col, ofstream& output) {
 
 		// converting from 360 to 180 so 359 --> 1 is now -1 --> 1
 		// only for eulerangle columns
-		if(col >= 9) {
+		if(col >= 12) {
 			if((gyro_y > 180) || (gyro_y < -180)) {
 				gyro_y -= 360;
 			}
@@ -236,7 +236,7 @@ void change(ifstream& input, int col, ofstream& output) {
 
 		// converting from 360 to 180 so 359 --> 1 is now -1 --> 1
 		// only for eulerangle columns
-		if(col >= 9) {
+		if(col >= 12) {
 			if((gyro_y > 180) || (gyro_y < -180)) {
 				gyro_y -= 360;
 			}
@@ -294,11 +294,9 @@ int main(int argc, char* argv[]) {
 
 	// creating array of file names so when one thing is changed in .cpp
 	// we can change all of the output files at once
-	int SIZE = 25;
-	string file[SIZE] = {"ositting.txt", "ostepping.txt", "ostep1.txt", "ostep2.txt",
-		"ostep3.txt", "ostep4.txt", "owalking.txt", "olooking.txt", "ofootL.txt", "ofootLU.txt",
-		"ofootLD.txt", "ofootR.txt", "ofootRU.txt", "ofootRD.txt", "owalk1.txt", "owalk2.txt",
-		"owalk3.txt", "owalk4.txt", "osit1.txt", "olook1.txt", "oheadFB.txt", "oheadD.txt", "oheadU.txt", "oheadUD.txt", "ovarying.txt"};
+	int SIZE = 11;
+	string file[SIZE] = {"oevery.txt", "osit1.txt", "osit2.txt", "osit3.txt", "osit4.txt", 
+						"owalk1.txt", "owalk2.txt", "owalk3.txt", "owalk4.txt", "oud.txt", "olr.txt"};
 
 	// creates dynamic array of input and output file paths
 	string* inputs = new string[SIZE];
@@ -316,17 +314,20 @@ int main(int argc, char* argv[]) {
 	for(int j=0; j<SIZE; j++) {
 	// iterating through columns from col input --> final column
 		ofstream output(outputs[j]);
-		for(int i=col; i<13; i++) {
-			output << "COL: " << colNames[i] << endl;
-			ifstream input(inputs[j]);
-			absMaxMin(input, i, output);
+		for(int i=col; i<15; i++) {
+			if(i != 11) {
 
-			ifstream input2(inputs[j]);
-			signMaxMin(input2, i, output);
+				output << "COL: " << colNames[i] << endl;
+				ifstream input(inputs[j]);
+				absMaxMin(input, i, output);
 
-			ifstream input3(inputs[j]);
-			change(input3, i, output);
-			output << endl;
+				ifstream input2(inputs[j]);
+				signMaxMin(input2, i, output);
+
+				ifstream input3(inputs[j]);
+				change(input3, i, output);
+				output << endl;
+			}
 		}
 	}
 

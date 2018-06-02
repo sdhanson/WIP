@@ -2,12 +2,15 @@ BIN_DIR = bin
 CXX = g++
 CPPFLAGS = -g -Wall -Wextra -Wconversion --std=c++11
 
-all: change
+all: change ochange
 
 # comp.o: comp.cpp comp.h bitstr.h
 # 	$(CXX) $(CPPFLAGS) -c $< -o $@
 
-sort: change.cpp
+change: change.cpp
+	$(CXX) $(CPPFLAGS) $< -o $@
+
+ochange: ochange.cpp
 	$(CXX) $(CPPFLAGS) $< -o $@
 
 .PHONY: clean

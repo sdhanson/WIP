@@ -1,0 +1,90 @@
+COL: accel.x
+ABSOLUTE VALUE MAX/MIN
+Max: 1.26095 line: 14
+Min: 0.0248134 line: 3
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 1.18801 line: 33
+Min: -1.26095 line: 14
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 0.507522 line: 59
+Min change: 0.0007736 line: 81
+Average change: 0.176106
+
+
+COL: accel.y
+ABSOLUTE VALUE MAX/MIN
+Max: 8.89153 line: 34
+Min: 0.0540657 line: 49
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 8.89153 line: 34
+Min: -7.32807 line: 40
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 5.83196 line: 50
+Min change: 0.016049 line: 2
+Average change: 1.33411
+
+
+COL: accel.z
+ABSOLUTE VALUE MAX/MIN
+Max: 2.35384 line: 74
+Min: 0.0148108 line: 59
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 1.38319 line: 16
+Min: -2.35384 line: 74
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 2.29847 line: 74
+Min change: 0.0108188 line: 63
+Average change: 0.359026
+
+
+COL: euler.x
+ABSOLUTE VALUE MAX/MIN
+Max: 7.87397 line: 34
+Min: 1.90393 line: 15
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 7.87397 line: 34
+Min: 1.90393 line: 15
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 2.38054 line: 75
+Min change: 0.011145 line: 66
+Average change: 0.542252
+
+
+COL: euler.y
+ABSOLUTE VALUE MAX/MIN
+Max: 7.87397 line: 34
+Min: 1.90393 line: 15
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 7.87397 line: 34
+Min: 1.90393 line: 15
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 2.38054 line: 75
+Min change: 0.011145 line: 66
+Average change: 0.542252
+
+
+COL: euler.z
+ABSOLUTE VALUE MAX/MIN
+Max: 7.87397 line: 34
+Min: 1.90393 line: 15
+
+NON ABSOLUTE VALUE MAX/MIN
+Max: 7.87397 line: 34
+Min: 1.90393 line: 15
+
+ABSOLUTE VALUE ONE STEP CHANGE
+Max change: 2.38055 line: 75
+Min change: 0.0111455 line: 66
+Average change: 0.542252
+
+
