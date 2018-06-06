@@ -6,6 +6,7 @@
 #include <cmath>
 #include <utility>
 #include <vector>
+#include <queue>
 
 
 using namespace std;
@@ -16,7 +17,7 @@ string colNames[] = {"Date", "Time", "Rand1", "Rand2", "letter", "Unity", "colon
 	"euler.x", "euler.y", "euler.z"};
 
 
-void time(ifstream& input, vector<double>& t) {
+void time(ifstream& input, vector<double>& sums, vector<double>& t) {
 
 	// declaring stringstream variables
 	string line, word;
@@ -72,7 +73,8 @@ void time(ifstream& input, vector<double>& t) {
 			prev=curr;
 		}
 
-		t.push_back(sum);
+		t.push_back(diff);
+		sums.push_back(sum);
 	}
 	
 }
@@ -107,7 +109,6 @@ void y(ifstream& input, vector<double>& y, int col) {
 }
 
 void format(ofstream& output, vector<double>& v) {
-	output << "Length: " << v.size() << endl;
 	output << "[";
 	for(unsigned int i=0; i<v.size(); i++) {
 		if(i == v.size()-1) {
@@ -118,15 +119,32 @@ void format(ofstream& output, vector<double>& v) {
 	}
 }
 
+vector<double> average(vector<double>& v) {
+	vector<double> final;
+
+	final.push_back(v[0]);
+	final.push_back(v[1]);
+	final.push_back(v[2]);
+
+	for(unsigned int i=3; i<v.size()-3; i++) {
+		double sum = v[i-3] + v[i-2] + v[i-1] + v[i] + v[i+1] + v[i+2] + v[i+3];
+		double avg = sum/7.0;
+		final.push_back(avg);
+	}
+	final.push_back(v[v.size()-3]);
+	final.push_back(v[v.size()-2]);
+	final.push_back(v[v.size()-1]);
+
+	return final;
+}
+
 
 int main() {
 	// creating array of file names so when one thing is changed in .cpp
 	// we can change all of the output files at once
-	// int SIZE = 11;
-	int SIZE = 1;
-	string file[SIZE] = {"owalk4.txt"};
-	// string file[SIZE] = {"oevery.txt", "osit1.txt", "osit2.txt", "osit3.txt", "osit4.txt", 
-	// 					"owalk1.txt", "owalk2.txt", "owalk3.txt", "owalk4.txt", "oud.txt", "olr.txt"};
+	int SIZE = 7;
+	string file[SIZE] = {"owalk101.txt", "owalk102.txt", "owalk103.txt", "owalk104.txt"
+						,"owalks7.txt", "owalks17.txt", "owalks27.txt"};
 
 	// creates dynamic array of input and output file paths
 	string* inputs = new string[SIZE];
@@ -140,19 +158,22 @@ int main() {
 		outputs[i] = opath;
 	}
 
-	vector<double> times;
-	vector<double> ys;
-	vector<double> xs;
-	vector<double> zs;
+
 
 	// iterates through all files and performs the analysis
 	for(int j=0; j<SIZE; j++) {
 	// iterating through columns from col input --> final column
+		vector<double> times;
+		vector<double> sums;
+		vector<double> ys;
+		vector<double> xs;
+		vector<double> zs;
+
 		ofstream output(outputs[j]);
 
 		ifstream input(inputs[j]);
 		cout << "HEREEEEEEE" << endl;
-		time(input, times);
+		time(input, sums, times);
 
 		ifstream input1(inputs[j]);
 		y(input1, ys, 9);
@@ -163,17 +184,35 @@ int main() {
 		ifstream input3(inputs[j]);
 		y(input3, zs, 10);
 
-		output << "TIME VECTOR" << endl;
-		format(output, times);
+		output << "t = ";
+		format(output, sums);
 
-		output << "X VECTOR" << endl;
+		// output << "t = ";
+		// format(output, times);
+
+		output << "x = ";
 		format(output, xs);
 
-		output << "Y VECTOR" << endl;
+
+		output << "y = ";
 		format(output, ys);
 
-		output << "Z VECTOR" << endl;
+
+		output << "z = ";
 		format(output, zs);
+
+
+		// vector<double> xf = average(xs);
+		// output << "X VECTOR SMOOTH" << endl;
+		// format(output, xf);
+
+		// vector<double> yf = average(ys);
+		// output << "Y VECTOR SMOOTH" << endl;
+		// format(output, yf);
+
+		// vector<double> zf = average(zs);
+		// output << "Z VECTOR SMOOTH" << endl;
+		// format(output, zf);
 	}
 
 	// frees memory
