@@ -123,16 +123,16 @@ vector<double> average(vector<double>& v) {
 	vector<double> final;
 
 	final.push_back(v[0]);
-	final.push_back(v[1]);
-	final.push_back(v[2]);
+	// final.push_back(v[1]);
+	// final.push_back(v[2]);
 
-	for(unsigned int i=3; i<v.size()-3; i++) {
-		double sum = v[i-3] + v[i-2] + v[i-1] + v[i] + v[i+1] + v[i+2] + v[i+3];
-		double avg = sum/7.0;
+	for(unsigned int i=1; i<v.size()-1; i++) {
+		double sum = v[i-1] + v[i] + v[i+1];
+		double avg = sum/3.0;
 		final.push_back(avg);
 	}
-	final.push_back(v[v.size()-3]);
-	final.push_back(v[v.size()-2]);
+	// final.push_back(v[v.size()-3]);
+	// final.push_back(v[v.size()-2]);
 	final.push_back(v[v.size()-1]);
 
 	return final;
@@ -190,29 +190,29 @@ int main() {
 		// output << "t = ";
 		// format(output, times);
 
+		// output << "x = ";
+		// format(output, xs);
+
+
+		// output << "y = ";
+		// format(output, ys);
+
+
+		// output << "z = ";
+		// format(output, zs);
+
+
+		vector<double> xf = average(xs);
 		output << "x = ";
-		format(output, xs);
+		format(output, xf);
 
-
+		vector<double> yf = average(ys);
 		output << "y = ";
-		format(output, ys);
+		format(output, yf);
 
-
+		vector<double> zf = average(zs);
 		output << "z = ";
-		format(output, zs);
-
-
-		// vector<double> xf = average(xs);
-		// output << "X VECTOR SMOOTH" << endl;
-		// format(output, xf);
-
-		// vector<double> yf = average(ys);
-		// output << "Y VECTOR SMOOTH" << endl;
-		// format(output, yf);
-
-		// vector<double> zf = average(zs);
-		// output << "Z VECTOR SMOOTH" << endl;
-		// format(output, zf);
+		format(output, zf);
 	}
 
 	// frees memory
