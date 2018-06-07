@@ -238,6 +238,9 @@ int main() {
 		format(output, zf);
 
 		output << "DERIVATIVE" << endl;
+		output << "t = ";
+		format(output, sums);
+
 		output << "y = ";
 		vector<double> d = derivative(ys);
 		format(output, d);
