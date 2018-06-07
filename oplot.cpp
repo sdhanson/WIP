@@ -147,6 +147,7 @@ vector<double> derivative(vector<double>& v) {
 	for(unsigned int i=1; i<v.size(); i++) {
 		double curr = v[i];
 		double diff = curr - prev;
+		prev = curr;
 		final.push_back(diff);
 	}
 
