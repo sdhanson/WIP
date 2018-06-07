@@ -244,6 +244,14 @@ int main() {
 		output << "y = ";
 		vector<double> d = derivative(ys);
 		format(output, d);
+
+		output << "SECOND DERIVATIVE" << endl;
+		output << "t = ";
+		format(output, sums);
+
+		output << "y = ";
+		vector<double> sd = derivative(d);
+		format(output, sd);
 	}
 
 	// frees memory
