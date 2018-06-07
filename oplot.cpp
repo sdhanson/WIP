@@ -138,6 +138,21 @@ vector<double> average(vector<double>& v) {
 	return final;
 }
 
+vector<double> derivative(vector<double>& v) {
+	vector<double> final;
+
+	final.push_back(0);
+
+	double prev = v[0];
+	for(unsigned int i=1; i<v.size(); i++) {
+		double curr = v[i];
+		double diff = curr - prev;
+		final.push_back(diff);
+	}
+
+	return final;
+}
+
 
 int main() {
 	// creating array of file names so when one thing is changed in .cpp
@@ -220,6 +235,11 @@ int main() {
 		vector<double> zf = average(zs);
 		output << "z = ";
 		format(output, zf);
+
+		output << "DERIVATIVE" << endl;
+		output << "y = ";
+		vector<double> d = derivative(ys);
+		format(output, d);
 	}
 
 	// frees memory
