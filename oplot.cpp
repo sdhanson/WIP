@@ -154,6 +154,14 @@ vector<double> derivative(vector<double>& v) {
 	return final;
 }
 
+void baseline(vector<double>& v) {
+	for(unsigned int i=0; i<v.size(); i++) {
+		if(v[i] < 0.5) {
+			v[i] = 0;
+		}
+	}
+}
+
 
 int main() {
 	// creating array of file names so when one thing is changed in .cpp
@@ -252,6 +260,14 @@ int main() {
 		output << "y = ";
 		vector<double> sd = derivative(d);
 		format(output, sd);
+
+		output << "BASELINE SUBTRACTION" << endl;
+		output << "t = ";
+		format(output, sums);
+
+		output << "y = ";
+		baseline(ys);
+		format(output, ys);
 	}
 
 	// frees memory
