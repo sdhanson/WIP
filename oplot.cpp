@@ -142,9 +142,12 @@ vector<double> average(vector<double>& v) {
 int main() {
 	// creating array of file names so when one thing is changed in .cpp
 	// we can change all of the output files at once
-	int SIZE = 7;
+	int SIZE = 17;
 	string file[SIZE] = {"owalk101.txt", "owalk102.txt", "owalk103.txt", "owalk104.txt"
-						,"owalks7.txt", "owalks17.txt", "owalks27.txt"};
+						,"owalks7.txt", "owalks17.txt", "owalks27.txt", "ohKneeS.txt",
+						"ohKneeF.txt", "oNormM.txt", "oNormS.txt", "oShuffM.txt",
+						"oVarL.txt", "oVar201.txt", "oVar202.txt", "oVar203.txt",
+						"ohkneeM.txt"};
 
 	// creates dynamic array of input and output file paths
 	string* inputs = new string[SIZE];
@@ -190,17 +193,20 @@ int main() {
 		// output << "t = ";
 		// format(output, times);
 
-		// output << "x = ";
-		// format(output, xs);
+		output << "x = ";
+		format(output, xs);
 
 
-		// output << "y = ";
-		// format(output, ys);
+		output << "y = ";
+		format(output, ys);
 
 
-		// output << "z = ";
-		// format(output, zs);
+		output << "z = ";
+		format(output, zs);
 
+		output << "SMOOTH" << endl;
+		output << "t = ";	
+		format(output, sums);
 
 		vector<double> xf = average(xs);
 		output << "x = ";
