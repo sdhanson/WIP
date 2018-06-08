@@ -200,6 +200,8 @@ void baseline(vector<double>& v) {
 	}
 }
 
+// THE FAST STEPPING WINDOW IS TOO BIG
+// NEED TO ACCOUNT FOR THE ??
 void step(vector<double>& t, vector<double>& v) {
 	vector<double> times;
 	vector<double> vals;
