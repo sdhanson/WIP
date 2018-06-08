@@ -8,7 +8,6 @@
 #include <vector>
 #include <queue>
 
-
 using namespace std;
 
 // global variable for column names 
@@ -16,44 +15,6 @@ string colNames[] = {"Date", "Time", "Rand1", "Rand2", "letter", "Unity", "colon
 	"Acceleration marker", "accel.x", "accel.y", "accel.z", "Euler marker",
 	"euler.x", "euler.y", "euler.z"};
 
-void gtime(ifstream& input, vector<double>& sums, vector<double>& t) {
-
-	// declaring stringstream variables
-	string line, word;
-	double prev;
-	double sum = 0;
-
-	// takes in each line, reads garbage numbers up to column number
-	// takes the column we want and compares to prev max/min and resets
-	// if need be
-	while(getline(input, line)) {
-		stringstream ss;
-
-		// discarding garbage values
-		for(int i=0; i<2; i++) {
-			string temp;
-			ss << line;
-			ss >> temp;
-		}
-
-		// converting column string to double
-		ss << line;
-		ss >> word;
-		stringstream tt;
-		tt << word;
-		double val;
-		tt >> val;
-		double diff;
-
-		diff = val-prev;
-		prev = val;
-		sum += diff;
-
-		t.push_back(diff);
-		sums.push_back(sum);
-	}
-	
-}
 
 void time(ifstream& input, vector<double>& sums, vector<double>& t) {
 
@@ -176,6 +137,29 @@ vector<double> average(vector<double>& v) {
 	return final;
 }
 
+void step(vector<double>& t, vector<double>& v, double threshold) {
+	vector<double> times;
+	vector<double> vals;
+	double pt = 0;
+	for(unsigned int i=1; i<v.size(); i++) {
+		if(v[i] > threshold && ((t[i]-pt) > 0.4)) {
+			times.push_back(t[i]);
+			vals.push_back(v[i]);
+			pt=t[i];
+		}
+	}
+	t = times;
+	v = vals;
+}
+
+void format_step(ofstream& output, vector<double>& times, vector<double>& vals, double threshold) {
+	output << "TIMES > " << threshold << endl;
+	output << "TIME - VALUE" << endl;
+	for(unsigned int i=0; i<vals.size(); i++) {
+		output << times[i] << " - " << vals[i] << endl;
+	}
+}
+
 vector<double> derivative(vector<double>& v) {
 	vector<double> final;
 
@@ -201,65 +185,30 @@ void baseline(vector<double>& v) {
 }
 
 
-int main(int argc, char* argv[]) {
-	if(argc < 2) {
-		cout << "ERROR" << endl;
-		return -1;
-	}
-
-	bool oculus = false;
-	string path = "./gdata/";
-	int xcol = 4;
-	int ycol = 5;
-	int zcol = 6;
-	unsigned int SIZE = 0;
-	vector<string> file;
-	string arg = argv[1];
-
-	if (arg == "oculus") {
-		oculus = true;
-	}
-	if(oculus) {
-		SIZE = 22;
-		string oculus[SIZE] = {"owalk101.txt", "owalk102.txt", "owalk103.txt", "owalk104.txt"
-						,"owalks7.txt", "owalks17.txt", "owalks27.txt", "ohKneeS.txt",
-						"ohKneeF.txt", "oNormM.txt", "oNormS.txt", "oShuffM.txt",
-						"oVarL.txt", "oVar201.txt", "oVar202.txt", "oVar203.txt",
-						"ohkneeM.txt", "oStand.txt", "oLook.txt", "oVarHK201.txt",
-						"oVarHK202.txt", "oVarHK203.txt"};
-		for(unsigned int i=0; i<SIZE; i++) {
-			file.push_back(oculus[i]);
-		}
-		path = "./odata/";
-		xcol = 8;
-		ycol = 9;
-		zcol = 10;
-	} else {
-		SIZE = 3;
-		string gear[SIZE] = {"ghKneeF.txt", "ghKneeS.txt", "ghKneeM.txt"};
-		for(unsigned int i=0; i<SIZE; i++) {
-			file.push_back(gear[i]);
-		}
-	}
-
+int main() {
 	// creating array of file names so when one thing is changed in .cpp
 	// we can change all of the output files at once
+	// int SIZE = 22;
+	// string file[SIZE] = {"owalk101.txt", "owalk102.txt", "owalk103.txt", "owalk104.txt"
+	// 					,"owalks7.txt", "owalks17.txt", "owalks27.txt", "ohKneeS.txt",
+	// 					"ohKneeF.txt", "oNormM.txt", "oNormS.txt", "oShuffM.txt",
+	// 					"oVarL.txt", "oVar201.txt", "oVar202.txt", "oVar203.txt",
+	// 					"ohkneeM.txt", "oStand.txt", "oLook.txt", "oVarHK201.txt",
+	// 					"oVarHK202.txt", "oVarHK203.txt"};
 
-
-	// CHANGE SO AUTOMATICALLY SWITCHES FOR GEAR AND USE COLUMN TWO FOR THE TIME STEP!!
-
-
+	int SIZE = 1;
+	string file[SIZE] = {"ghkneeM.txt"};
 
 	// creates dynamic array of input and output file paths
 	string* inputs = new string[SIZE];
 	string* outputs = new string[SIZE];
 
 	// fills in arrays with file paths
-	for(unsigned int i=0; i<file.size(); i++) {
+	for(int i=0; i<SIZE; i++) {
 		// string ipath = "./odata/" + file[i];
-		// string opath = "./panalysis/P" + file[i];
-		string ipath = path + file[i];
-		string opath = "./panalysis/P" + file[i];
+		// string opath = "./tanalysis/Td" + file[i];
+		string ipath = "./gdata/" + file[i];
+		string opath = "./tanalysis/Td" + file[i];
 		inputs[i] = ipath;
 		outputs[i] = opath;
 	}
@@ -267,7 +216,7 @@ int main(int argc, char* argv[]) {
 
 
 	// iterates through all files and performs the analysis
-	for(unsigned int j=0; j<SIZE; j++) {
+	for(int j=0; j<SIZE; j++) {
 	// iterating through columns from col input --> final column
 		vector<double> times;
 		vector<double> sums;
@@ -279,77 +228,18 @@ int main(int argc, char* argv[]) {
 
 		ifstream input(inputs[j]);
 		cout << "HEREEEEEEE" << endl;
-		if(oculus) {
-			time(input, sums, times);
-		} else {
-			gtime(input, sums, times);
-		}
+		time(input, sums, times);
 
 		ifstream input1(inputs[j]);
-		y(input1, ys, ycol);
-
-		ifstream input2(inputs[j]);
-		y(input2, xs, xcol);
-
-		ifstream input3(inputs[j]);
-		y(input3, zs, zcol);
-
-		output << "t = ";
-		format(output, sums);
-
-		// output << "t = ";
-		// format(output, times);
-
-		output << "x = ";
-		format(output, xs);
-
-
-		output << "y = ";
-		format(output, ys);
-
-
-		output << "z = ";
-		format(output, zs);
-
-		output << "SMOOTH" << endl;
-		output << "t = ";	
-		format(output, sums);
-
-		vector<double> xf = average(xs);
-		output << "x = ";
-		format(output, xf);
-
-		vector<double> yf = average(ys);
-		output << "y = ";
-		format(output, yf);
-
-		vector<double> zf = average(zs);
-		output << "z = ";
-		format(output, zf);
-
-		output << "DERIVATIVE" << endl;
-		output << "t = ";
-		format(output, sums);
-
-		output << "y = ";
+		// col for y in oculus is 9, gear is 5
+		y(input1, ys, 5);
 		vector<double> d = derivative(ys);
-		format(output, d);
 
-		output << "SECOND DERIVATIVE" << endl;
-		output << "t = ";
-		format(output, sums);
+		double threshold = 2.5;
 
-		output << "y = ";
-		vector<double> sd = derivative(d);
-		format(output, sd);
+		step(sums, d, threshold);
+		format_step(output, sums, d, threshold);
 
-		output << "BASELINE SUBTRACTION" << endl;
-		output << "t = ";
-		format(output, sums);
-
-		output << "y = ";
-		baseline(ys);
-		format(output, ys);
 	}
 
 	// frees memory
