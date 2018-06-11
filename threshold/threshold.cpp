@@ -166,7 +166,7 @@ void derivative(vector<Thresh>& v) {
 
 void swap(vector<Thresh>& v, int x, int z);
 
-void quicksort(vector<Thresh> &vec, int L, int R) {
+void quicksortY(vector<Thresh> &vec, int L, int R) {
     int i, j, mid; 
     double piv;
     i = L;
@@ -187,9 +187,9 @@ void quicksort(vector<Thresh> &vec, int L, int R) {
         }
         else {
             if (i < R)
-                quicksort(vec, i, R);
+                quicksortY(vec, i, R);
             if (j > L)
-                quicksort(vec, L, j);
+                quicksortY(vec, L, j);
             return;
         }
     }
@@ -208,44 +208,77 @@ void swap(vector<Thresh>& v, int x, int z) {
 
 }
 
+// I KNOW I COULD MAKE A COMPARATOR AND PASS IN DIFF COMPARATORS BUT THIS IS TRULY EASIER
+
+void quicksortT(vector<Thresh> &vec, int L, int R) {
+    int i, j, mid; 
+    double piv;
+    i = L;
+    j = R;
+    mid = L + (R - L) / 2;
+    piv = abs(vec[mid].time);
+
+    while (i<R || j>L) {
+        while (abs(vec[i].time) < piv)
+            i++;
+        while (abs(vec[j].time) > piv)
+            j--;
+
+        if (i <= j) {
+            swap(vec, i, j); //error=swap function doesnt take 3 arguments
+            i++;
+            j--;
+        }
+        else {
+            if (i < R)
+                quicksortT(vec, i, R);
+            if (j > L)
+                quicksortT(vec, L, j);
+            return;
+        }
+    }
+}
+
 void format(ofstream& output, vector<Thresh>& v) {
 	for(unsigned int i=0; i<v.size(); i++) {
 		output << v[i].time << " - " << v[i].y << " - " << v[i].derivative << endl;
 	}
 }
 
+
+// ASSUMES AT LEAST 20 IN THE VECTOR
 vector<Thresh> window(vector<Thresh>& v, double w) {
 	vector<Thresh> final;
-	// int range = static_cast<int>(v.size()-1-20);
-	// if(v.size()-1 < 20) {
-	// 	range = 0;
-	// }
-	// for(unsigned int i=range; i<v.size(); i++) {
-	// 	if(i != 0) {
-	// 		if(abs(abs(v[i].time) - abs(v[i-1])) < w) {
-	// 			continue;
-	// 		}
-	// 	}
-	// 	else {
-	// 		final.push_back(v[i]);
-	// 	}
-	// }
-
-	// for(int i=0; i<final.size(); i++) {
-
-	// }
 
 	int count = static_cast<int>(v.size()-1);
 	final.push_back(v[count--]);
 	while((final.size() < 20) && (count > 0)) {
-		if(abs(abs(v[count].time) - abs(final[static_cast<int>(final.size()-1)].time)) < w) {
-			count --;
-		} else {
+		bool good = true;
+		for(unsigned int i=0; i<final.size();i++) {
+			if(abs(abs(v[count].time) - abs(final[i].time)) < w) {
+				good = false;
+			}
+		}
+		if(good) {
 			final.push_back(v[count]);
+			count--;
+		} else {
 			count--;
 		}
 	}
 	return final;
+}
+
+double dist(vector<Thresh>& v) {
+	double sum = 0;
+	double prev = v[0].time;
+	for(unsigned int i=1; i<v.size(); i++) {
+		double diff = abs(prev-v[i].time);
+		sum += diff;
+		prev = v[i].time;
+	}
+
+	return sum/(static_cast<int>(v.size()-1));
 }
 
 
@@ -330,13 +363,22 @@ int main(int argc, char* argv[]) {
 
 		derivative(ys);
 
-		quicksort(ys, 0, static_cast<int>(ys.size()-1));
+		quicksortY(ys, 0, static_cast<int>(ys.size()-1));
 
 		// format(output, ys);
 
 		vector<Thresh> sm = window(ys, 0.2);
 
-		format(output, sm);
+		quicksortT(sm, 0, static_cast<int>(sm.size()-1));
+
+		cout << dist(ys) << endl;
+
+		// for any that are under the average time different (or some percentage of it) then remove those and if
+		// the size of the new vector is below whatever we want it to be then add back the most recent ones
+
+		vector<Thresh> xs = window(sm, static_cast<double>(dist(sm)));
+
+		format(output, xs);
 
 		// quicksort y
 	}
