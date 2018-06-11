@@ -15,6 +15,44 @@ string colNames[] = {"Date", "Time", "Rand1", "Rand2", "letter", "Unity", "colon
 	"Acceleration marker", "accel.x", "accel.y", "accel.z", "Euler marker",
 	"euler.x", "euler.y", "euler.z"};
 
+void gtime(ifstream& input, vector<double>& sums, vector<double>& t) {
+
+	// declaring stringstream variables
+	string line, word;
+	double prev;
+	double sum = 0;
+
+	// takes in each line, reads garbage numbers up to column number
+	// takes the column we want and compares to prev max/min and resets
+	// if need be
+	while(getline(input, line)) {
+		stringstream ss;
+
+		// discarding garbage values
+		for(int i=0; i<2; i++) {
+			string temp;
+			ss << line;
+			ss >> temp;
+		}
+
+		// converting column string to double
+		ss << line;
+		ss >> word;
+		stringstream tt;
+		tt << word;
+		double val;
+		tt >> val;
+		double diff;
+
+		diff = val-prev;
+		prev = val;
+		sum += diff;
+
+		t.push_back(diff);
+		sums.push_back(sum);
+	}
+	
+}
 
 void time(ifstream& input, vector<double>& sums, vector<double>& t) {
 
@@ -197,7 +235,10 @@ int main() {
 	// 					"oVarHK202.txt", "oVarHK203.txt"};
 
 	int SIZE = 1;
-	string file[SIZE] = {"ghkneeM.txt"};
+	string file[SIZE] = {"ghKneeM.txt"};
+	int xcol = 4;
+	int ycol = 5;
+	int zcol = 6;
 
 	// creates dynamic array of input and output file paths
 	string* inputs = new string[SIZE];
@@ -228,17 +269,18 @@ int main() {
 
 		ifstream input(inputs[j]);
 		cout << "HEREEEEEEE" << endl;
-		time(input, sums, times);
+		gtime(input, sums, times);
 
 		ifstream input1(inputs[j]);
 		// col for y in oculus is 9, gear is 5
 		y(input1, ys, 5);
 		vector<double> d = derivative(ys);
+		vector<double> sd = derivative(d);
 
-		double threshold = 2.5;
+		double threshold = 0.6;
 
-		step(sums, d, threshold);
-		format_step(output, sums, d, threshold);
+		step(sums, sd, threshold);
+		format_step(output, sums, sd, threshold);
 
 	}
 
