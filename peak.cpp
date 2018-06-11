@@ -210,6 +210,8 @@ void step(vector<double>& t, vector<double>& v) {
 	double window = 10000;
 
 	for(unsigned int i=1; i<v.size(); i++) {
+		// three sections - slow, medium, fast (is there interpolation i
+		// could do)
 		if(t[i]-pt > 0.77) {
 			threshold = 2.0;
 			window = 0.4;
