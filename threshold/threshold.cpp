@@ -151,37 +151,33 @@ void y(ifstream& input, vector<Thresh>& y, int col) {
 	}
 }
 
-vector<double> derivative(vector<double>& v) {
-	vector<double> final;
+void derivative(vector<Thresh>& v) {
+	v[0].derivative = 0;
 
-	final.push_back(0);
-
-	double prev = v[0];
+	double prev = v[0].y;
 	for(unsigned int i=1; i<v.size(); i++) {
-		double curr = v[i];
+		double curr = v[i].y;
 		double diff = curr - prev;
 		prev = curr;
-		final.push_back(diff);
+		v[i].derivative = diff;
 	}
-
-	return final;
 }
 
 
-void swap(vector<double>& v, int x, int y);
+void swap(vector<Thresh>& v, int x, int z);
 
-void quicksort(vector<double> &vec, int L, int R) {
+void quicksort(vector<Thresh> &vec, int L, int R) {
     int i, j, mid; 
     double piv;
     i = L;
     j = R;
     mid = L + (R - L) / 2;
-    piv = vec[mid];
+    piv = abs(vec[mid].y);
 
     while (i<R || j>L) {
-        while (vec[i] < piv)
+        while (abs(vec[i].y) < piv)
             i++;
-        while (vec[j] > piv)
+        while (abs(vec[j].y) > piv)
             j--;
 
         if (i <= j) {
@@ -199,11 +195,57 @@ void quicksort(vector<double> &vec, int L, int R) {
     }
 }
 
-void swap(vector<double>& v, int x, int y) {
-    double temp = v[x];
-    v[x] = v[y];
-    v[y] = temp;
+void swap(vector<Thresh>& v, int x, int z) {
+    double ty = v[x].y;
+    double tt = v[x].time;
+    double td = v[x].derivative;
+    v[x].y = v[z].y;
+    v[x].time = v[z].time;
+    v[x].derivative = v[z].derivative;
+    v[z].y = ty;
+    v[z].time = tt;
+    v[z].derivative = td;
 
+}
+
+void format(ofstream& output, vector<Thresh>& v) {
+	for(unsigned int i=0; i<v.size(); i++) {
+		output << v[i].time << " - " << v[i].y << " - " << v[i].derivative << endl;
+	}
+}
+
+vector<Thresh> window(vector<Thresh>& v, double w) {
+	vector<Thresh> final;
+	// int range = static_cast<int>(v.size()-1-20);
+	// if(v.size()-1 < 20) {
+	// 	range = 0;
+	// }
+	// for(unsigned int i=range; i<v.size(); i++) {
+	// 	if(i != 0) {
+	// 		if(abs(abs(v[i].time) - abs(v[i-1])) < w) {
+	// 			continue;
+	// 		}
+	// 	}
+	// 	else {
+	// 		final.push_back(v[i]);
+	// 	}
+	// }
+
+	// for(int i=0; i<final.size(); i++) {
+
+	// }
+
+	int count = static_cast<int>(v.size()-1);
+	final.push_back(v[count--]);
+	while((final.size() < 20) && (count > 0)) {
+		if(abs(abs(v[count].time) - abs(final[static_cast<int>(final.size()-1)].time)) < w) {
+			count --;
+		} else {
+			final.push_back(v[count]);
+			count--;
+		}
+	}
+	return final;
 }
 
 
@@ -286,7 +328,15 @@ int main(int argc, char* argv[]) {
 			gtime(input, ys);
 		}
 
-		// vector<double> d = derivative(ys);
+		derivative(ys);
+
+		quicksort(ys, 0, static_cast<int>(ys.size()-1));
+
+		// format(output, ys);
+
+		vector<Thresh> sm = window(ys, 0.2);
+
+		format(output, sm);
 
 		// quicksort y
 	}
