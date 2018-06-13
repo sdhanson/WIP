@@ -296,15 +296,18 @@ int main(int argc, char* argv[]) {
 	// creates dynamic array of input and output file paths
 	string* inputs = new string[SIZE];
 	string* outputs = new string[SIZE];
+	string* doutputs = new string[SIZE];
 
 	// fills in arrays with file paths
 	for(unsigned int i=0; i<file.size(); i++) {
 		// string ipath = "./odata/" + file[i];
 		// string opath = "./panalysis/P" + file[i];
 		string ipath = path + file[i];
-		string opath = "./kanalysis/Kd" + file[i];
+		string opath = "./kanalysis/K" + file[i];
+		string dopath = "./kanalysis/Kd" + file[i];
 		inputs[i] = ipath;
 		outputs[i] = opath;
+		doutputs[i] = dopath;
 	}
 
 
@@ -315,10 +318,12 @@ int main(int argc, char* argv[]) {
 		vector<double> times;
 		vector<double> sums;
 		vector<double> ys;
+		vector<double> yd;
 		vector<double> xs;
 		vector<double> zs;
 
 		ofstream output(outputs[j]);
+		ofstream doutput(doutputs[j]);
 
 		ifstream input(inputs[j]);
 		cout << "HEREEEEEEE" << endl;
@@ -331,13 +336,17 @@ int main(int argc, char* argv[]) {
 		ifstream input1(inputs[j]);
 		y(input1, ys, ycol);
 
-		vector<double> d = derivative(ys);
+		step(sums, ys);
+		format_step(output, sums, ys);
+
+		ifstream input2(inputs[j]);
+		y(input2, yd, ycol);
+
+
+		vector<double> d = derivative(yd);
 
 		step(sums, d);
-		format_step(output, sums, d);
-
-		// step(sums, ys);
-		// format_step(output, sums, ys);
+		format_step(doutput, sums, d);
 
 	}
 

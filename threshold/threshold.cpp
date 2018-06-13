@@ -245,7 +245,7 @@ vector<Thresh> window(vector<Thresh>& v, double w) {
 
 	int count = static_cast<int>(v.size()-1);
 	final.push_back(v[count--]);
-	while((final.size() < 20) && (count > 0)) {
+	while((final.size() < 12) && (count > 0)) {
 		bool good = true;
 		for(unsigned int i=0; i<final.size();i++) {
 			if(abs(abs(v[count].time) - abs(final[i].time)) < w) {
@@ -272,6 +272,17 @@ double dist(vector<Thresh>& v) {
 	}
 
 	return sum/(static_cast<int>(v.size()-1));
+}
+
+void neg(vector<Thresh>& v) {
+	vector<Thresh> final;
+	for(unsigned int i=0; i<v.size(); i++) {
+		if(v[i].y > 0) {
+			final.push_back(v[i]);
+		}
+	}
+
+	v = final;
 }
 
 
@@ -349,8 +360,10 @@ int main(int argc, char* argv[]) {
 			gtime(input, ys);
 		}
 
-		derivative(ys);
-		cout << "d: " << dist(ys) << endl;
+		neg(ys);
+
+		// derivative(ys);
+		// cout << "d: " << dist(ys) << endl;
 
 
 		quicksortY(ys, 0, static_cast<int>(ys.size()-1));
@@ -360,34 +373,45 @@ int main(int argc, char* argv[]) {
 		quicksortT(sm, 0, static_cast<int>(sm.size()-1));
 		cout << "small: " << dist(sm) << endl;
 
+		for(unsigned int i=0; i<sm.size(); i++) {
+			cout << sm[i].time << endl;
+		}
+
+		// OKAY NOW THAT WE HAVE THOSE THEN WE NEED TO GET THE AVERAGE
+		// DISTANCE AND MAX DISTANCE 
+		// AND COMPARE STUFF BETWEEN THESE AND THEN WE HAVE THE THRESHOLDS ??
+
 		
 		// basically go 50% of window 
 
 
 		vector<Thresh> final = sm;
-		int len = static_cast<int>(final.size());
-		double start = 0.2;
-		double end = static_cast<double>(dist(final));
+		// int len = static_cast<int>(final.size());
+		// double start = 0.2;
+		// double end = static_cast<double>(dist(final));
 
 
-		int SIZE = 10;
-		int count = 0;
+		// int SIZE = 10;
+		// int count = 0;
+		// vector<Thresh> temp;
 
-		while ((len != SIZE) && count < 100) {
+		// while ((len != SIZE) && count < 100) {
 
-			double distance = (end-start)/2 + start;
+		// 	double distance = (end-start)/2 + start;
 
-			vector<Thresh> temp = window(final, static_cast<double>(dist(final)));
-			len = static_cast<int>(temp.size());
+		// 	temp = window(final, static_cast<double>(dist(final)));
+		// 	len = static_cast<int>(temp.size());
 
-			if(len > SIZE) {
-				start = distance;
-			} else {
-				end = distance;
-			}
-			count++;
-		}
-		cout << count << endl;
+		// 	if(len > SIZE) {
+		// 		start = distance;
+		// 	} else {
+		// 		end = distance;
+		// 	}
+		// 	count++;
+		// }
+
+		// cout << count << endl;
+		// final = temp;
 
 		// for any that are under the average time different (or some percentage of it) then remove those and if
 		// the size of the new vector is below whatever we want it to be then add back the most recent ones
