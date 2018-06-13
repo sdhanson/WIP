@@ -215,9 +215,9 @@ void step(vector<double>& t, vector<double>& v) {
 		if(t[i]-pt > 0.77) {
 			threshold = 2.0;
 			window = 0.4;
-		} else if(t[i]-pt > 0.55) {
+		} else if(t[i]-pt > 0.40) {
 			threshold = 2.5;
-			window = 0.4;
+			window = 0.3;
 		} else if(t[i]-pt > 0.19){
 			threshold = 3.75;
 			window = 0.2;
@@ -266,8 +266,10 @@ int main(int argc, char* argv[]) {
 		// 				"oVarL.txt", "oVar201.txt", "oVar202.txt", "oVar203.txt",
 		// 				"ohkneeM.txt", "oStand.txt", "oLook.txt", "oVarHK201.txt",
 		// 				"oVarHK202.txt", "oVarHK203.txt"};
-		SIZE = 3;
-		string oculus[SIZE] = {"oVarHK201.txt", "oVarHK202.txt", "oVarHK203.txt"};
+		SIZE = 11;
+		string oculus[SIZE] = {"oVarHK181.txt", "oVarHK16.txt", "oVarHK101.txt", "oVarHK17.txt",
+								"oVarHK131.txt", "oVarHK171.txt", "oVarHK121.txt", "oVar161.txt",
+								"oVarHK201.txt", "oVarHK202.txt", "oVarHK203.txt"};
 		for(unsigned int i=0; i<SIZE; i++) {
 			file.push_back(oculus[i]);
 		}
@@ -300,7 +302,7 @@ int main(int argc, char* argv[]) {
 		// string ipath = "./odata/" + file[i];
 		// string opath = "./panalysis/P" + file[i];
 		string ipath = path + file[i];
-		string opath = "./kanalysis/K" + file[i];
+		string opath = "./kanalysis/Kd" + file[i];
 		inputs[i] = ipath;
 		outputs[i] = opath;
 	}
@@ -333,6 +335,9 @@ int main(int argc, char* argv[]) {
 
 		step(sums, d);
 		format_step(output, sums, d);
+
+		// step(sums, ys);
+		// format_step(output, sums, ys);
 
 	}
 
