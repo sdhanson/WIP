@@ -272,13 +272,13 @@ int main(int argc, char* argv[]) {
 		oculus = true;
 	}
 	if(oculus) {
-		SIZE = 23;
+		SIZE = 24;
 		string oculus[SIZE] = {"owalk101.txt", "owalk102.txt", "owalk103.txt", "owalk104.txt"
 						,"owalks7.txt", "owalks17.txt", "owalks27.txt", "ohKneeS.txt",
 						"ohKneeF.txt", "oNormM.txt", "oNormS.txt", "oShuffM.txt",
 						"oVarL.txt", "oVar201.txt", "oVar202.txt", "oVar203.txt",
 						"ohkneeM.txt", "oStand.txt", "oLook.txt", "oVarHK201.txt",
-						"oVarHK202.txt", "oVarHK203.txt", "oVarHK181.txt"};
+						"oVarHK202.txt", "oVarHK203.txt", "oVarHK181.txt", "oVarHK16.txt"};
 		for(unsigned int i=0; i<SIZE; i++) {
 			file.push_back(oculus[i]);
 		}

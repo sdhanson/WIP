@@ -235,7 +235,7 @@ int main() {
 	// 					"oVarHK202.txt", "oVarHK203.txt"};
 
 	int SIZE = 1;
-	string file[SIZE] = {"oVarHK181.txt"};
+	string file[SIZE] = {"oVarHK16.txt"};
 	int xcol = 8;
 	int ycol = 9;
 	int zcol = 10;
