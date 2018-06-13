@@ -12,13 +12,6 @@
 
 using namespace std;
 
-
-
-// global variable for column names 
-string colNames[] = {"Date", "Time", "Rand1", "Rand2", "letter", "Unity", "colon",
-	"Acceleration marker", "accel.x", "accel.y", "accel.z", "Euler marker",
-	"euler.x", "euler.y", "euler.z"};
-
 void gtime(ifstream& input, vector<Thresh>& v) {
 
 	// declaring stringstream variables
@@ -303,13 +296,8 @@ int main(int argc, char* argv[]) {
 		oculus = true;
 	}
 	if(oculus) {
-		SIZE = 22;
-		string oculus[SIZE] = {"owalk101.txt", "owalk102.txt", "owalk103.txt", "owalk104.txt"
-						,"owalks7.txt", "owalks17.txt", "owalks27.txt", "ohKneeS.txt",
-						"ohKneeF.txt", "oNormM.txt", "oNormS.txt", "oShuffM.txt",
-						"oVarL.txt", "oVar201.txt", "oVar202.txt", "oVar203.txt",
-						"ohkneeM.txt", "oStand.txt", "oLook.txt", "oVarHK201.txt",
-						"oVarHK202.txt", "oVarHK203.txt"};
+		SIZE = 3;
+		string oculus[SIZE] = {"ohKneeS.txt", "ohKneeF.txt", "ohkneeM.txt"};
 		for(unsigned int i=0; i<SIZE; i++) {
 			file.push_back(oculus[i]);
 		}
@@ -362,23 +350,53 @@ int main(int argc, char* argv[]) {
 		}
 
 		derivative(ys);
+		cout << "d: " << dist(ys) << endl;
+
 
 		quicksortY(ys, 0, static_cast<int>(ys.size()-1));
-
-		// format(output, ys);
 
 		vector<Thresh> sm = window(ys, 0.2);
 
 		quicksortT(sm, 0, static_cast<int>(sm.size()-1));
+		cout << "small: " << dist(sm) << endl;
 
-		cout << dist(ys) << endl;
+		
+		// basically go 50% of window 
+
+
+		vector<Thresh> final = sm;
+		int len = static_cast<int>(final.size());
+		double start = 0.2;
+		double end = static_cast<double>(dist(final));
+
+
+		int SIZE = 10;
+		int count = 0;
+
+		while ((len != SIZE) && count < 100) {
+
+			double distance = (end-start)/2 + start;
+
+			vector<Thresh> temp = window(final, static_cast<double>(dist(final)));
+			len = static_cast<int>(temp.size());
+
+			if(len > SIZE) {
+				start = distance;
+			} else {
+				end = distance;
+			}
+			count++;
+		}
+		cout << count << endl;
 
 		// for any that are under the average time different (or some percentage of it) then remove those and if
 		// the size of the new vector is below whatever we want it to be then add back the most recent ones
 
-		vector<Thresh> xs = window(sm, static_cast<double>(dist(sm)));
+		// vector<Thresh> xs = window(sm, static_cast<double>(dist(sm)));
 
-		format(output, xs);
+		// create temp vector and assign 
+
+		format(output, final);
 
 		// quicksort y
 	}

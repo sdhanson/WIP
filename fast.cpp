@@ -235,10 +235,10 @@ int main() {
 	// 					"oVarHK202.txt", "oVarHK203.txt"};
 
 	int SIZE = 1;
-	string file[SIZE] = {"ghKneeM.txt"};
-	int xcol = 4;
-	int ycol = 5;
-	int zcol = 6;
+	string file[SIZE] = {"oVarHK181.txt"};
+	int xcol = 8;
+	int ycol = 9;
+	int zcol = 10;
 
 	// creates dynamic array of input and output file paths
 	string* inputs = new string[SIZE];
@@ -248,7 +248,7 @@ int main() {
 	for(int i=0; i<SIZE; i++) {
 		// string ipath = "./odata/" + file[i];
 		// string opath = "./tanalysis/Td" + file[i];
-		string ipath = "./gdata/" + file[i];
+		string ipath = "./odata/" + file[i];
 		string opath = "./tanalysis/Td" + file[i];
 		inputs[i] = ipath;
 		outputs[i] = opath;
@@ -269,11 +269,11 @@ int main() {
 
 		ifstream input(inputs[j]);
 		cout << "HEREEEEEEE" << endl;
-		gtime(input, sums, times);
+		time(input, sums, times);
 
 		ifstream input1(inputs[j]);
 		// col for y in oculus is 9, gear is 5
-		y(input1, ys, 5);
+		y(input1, ys, 9);
 		vector<double> d = derivative(ys);
 		vector<double> sd = derivative(d);
 
