@@ -212,14 +212,26 @@ void step(vector<double>& t, vector<double>& v) {
 	for(unsigned int i=1; i<v.size(); i++) {
 		// three sections - slow, medium, fast (is there interpolation i
 		// could do)
-		if(t[i]-pt > 0.77) {
-			threshold = 2.0;
+
+		// INITIAL THRESHOLDS FOR MEEEEEEE THAT WORKED
+		// if(t[i]-pt > 0.77) {
+		// 	threshold = 2.0;
+		// 	window = 0.4;
+		// } else if(t[i]-pt > 0.40) {
+		// 	threshold = 2.5;
+		// 	window = 0.3;
+		// } else if(t[i]-pt > 0.19){
+		// 	threshold = 3.75;
+		// 	window = 0.2;
+		// } 
+		if(t[i]-pt > 0.67) {
+			threshold = 2.1;
 			window = 0.4;
-		} else if(t[i]-pt > 0.40) {
-			threshold = 2.5;
+		} else if(t[i]-pt > 0.44) {
+			threshold = 2.4;
 			window = 0.3;
-		} else if(t[i]-pt > 0.19){
-			threshold = 3.75;
+		} else if(t[i]-pt > 0.33){
+			threshold = 5.0;
 			window = 0.2;
 		} 
 		if(v[i] > threshold && ((t[i]-pt) > window)) {
@@ -303,8 +315,8 @@ int main(int argc, char* argv[]) {
 		// string ipath = "./odata/" + file[i];
 		// string opath = "./panalysis/P" + file[i];
 		string ipath = path + file[i];
-		string opath = "./kanalysis/K" + file[i];
-		string dopath = "./kanalysis/Kd" + file[i];
+		string opath = "./kanalysis/Kt" + file[i];
+		string dopath = "./kanalysis/Kdt" + file[i];
 		inputs[i] = ipath;
 		outputs[i] = opath;
 		doutputs[i] = dopath;

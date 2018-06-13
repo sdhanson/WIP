@@ -240,12 +240,12 @@ void format(ofstream& output, vector<Thresh>& v) {
 
 
 // ASSUMES AT LEAST 20 IN THE VECTOR
-vector<Thresh> window(vector<Thresh>& v, double w) {
+vector<Thresh> window(vector<Thresh>& v, double w, int peaks) {
 	vector<Thresh> final;
 
 	int count = static_cast<int>(v.size()-1);
 	final.push_back(v[count--]);
-	while((final.size() < 12) && (count > 0)) {
+	while((final.size() < peaks) && (count > 0)) {
 		bool good = true;
 		for(unsigned int i=0; i<final.size();i++) {
 			if(abs(abs(v[count].time) - abs(final[i].time)) < w) {
@@ -285,12 +285,57 @@ void neg(vector<Thresh>& v) {
 	v = final;
 }
 
+double max(vector<Thresh>& v) {
+	double max = 0;
+	for(unsigned int i=1; i<v.size(); i++) {
+		double step = v[i].time - v[i-1].time;
+		if(step > max) {
+			max = step;
+		}
+	}
+	return max;
+}
+
+double min(vector<Thresh>& v) {
+	double min = 10000000;
+	for(unsigned int i=1; i<v.size(); i++) {
+		double step = v[i].time - v[i-1].time;
+		if(step < min) {
+			min = step;
+		}
+	}
+	return min;
+	
+}
+
+double avg(vector<Thresh>& v) {
+	double sum = 0;
+	int count = 0;
+	for(unsigned int i=1; i<v.size(); i++) {
+		double step = v[i].time - v[i-1].time;
+		sum += step;
+		count++;
+	}
+	return sum/count;
+}
+
+double miny(vector<Thresh>& v) {
+	double min = 10000000;
+	for(unsigned int i=0; i<v.size(); i++) {
+		if(v[i].y < min) {
+			min = v[i].y;
+		}
+	}
+	return min;
+	
+}
+
 
 /* THIS IS TO FIND THE ThreshOLD THIS ALGO IS TO FIND THE ThreshOLD */
 
 int main(int argc, char* argv[]) {
-	if(argc < 2) {
-		cout << "ERROR" << endl;
+	if(argc < 5) {
+		cout << "ERROR: prog oculus slow 11 file" << endl;
 		return -1;
 	}
 
@@ -301,28 +346,50 @@ int main(int argc, char* argv[]) {
 
 	unsigned int SIZE = 0;
 	vector<string> file;
-	string arg = argv[1];
+	string arg1 = argv[1];
+	string arg2 = argv[2];
 
-	if (arg == "oculus") {
+
+	double win;
+	string speaks = argv[3];
+	stringstream ss;
+	ss << speaks;
+	int peaks;
+	ss >> peaks;
+
+	if (arg1 == "oculus") {
 		oculus = true;
 	}
+
+	if(arg2 == "slow") {
+		win = 0.4;
+	} else if(arg2 == "med") {
+		win = 0.3;
+	} else {
+		win = 0.2;
+	}
+
 	if(oculus) {
-		SIZE = 3;
-		string oculus[SIZE] = {"ohKneeS.txt", "ohKneeF.txt", "ohkneeM.txt"};
-		for(unsigned int i=0; i<SIZE; i++) {
-			file.push_back(oculus[i]);
-		}
+		// SIZE = 3;
+		// string oculus[SIZE] = {"ohKneeS.txt", "ohkneeM.txt", "ohKneeF.txt"};
+		// for(unsigned int i=0; i<SIZE; i++) {
+		// 	file.push_back(oculus[i]);
+		// }
 		path = "../odata/";
 
 		ycol = 9;
 
 	} else {
-		SIZE = 4;
-		string gear[SIZE] = {"ghKneeF.txt", "ghKneeS.txt", "ghKneeM.txt", "ghVar201.txt"};
-		for(unsigned int i=0; i<SIZE; i++) {
-			file.push_back(gear[i]);
-		}
+		// SIZE = 3;
+		// string gear[SIZE] = {"ghKneeS.txt", "ghKneeM.txt", "ghKneeF.txt"};
+		// for(unsigned int i=0; i<SIZE; i++) {
+		// 	file.push_back(gear[i]);
+		// }
 	}
+
+	SIZE = 1;
+	string fname = argv[4];
+	file.push_back(fname);
 
 	// creates dynamic array of input and output file paths
 	string* inputs = new string[SIZE];
@@ -339,6 +406,8 @@ int main(int argc, char* argv[]) {
 	}
 
 
+	// HAVE TO LOOK AT THE GRAPH AND COUNT THE PEAKS IN ORDER TO SET
+	// NUMBER OF HOW MANY PEAKS TO LOOK FOR
 
 	// iterates through all files and performs the analysis
 	for(unsigned int j=0; j<SIZE; j++) {
@@ -368,7 +437,9 @@ int main(int argc, char* argv[]) {
 
 		quicksortY(ys, 0, static_cast<int>(ys.size()-1));
 
-		vector<Thresh> sm = window(ys, 0.2);
+
+		// use diff window thresholds for the slow, medium, fast
+		vector<Thresh> sm = window(ys, win, peaks);
 
 		quicksortT(sm, 0, static_cast<int>(sm.size()-1));
 		cout << "small: " << dist(sm) << endl;
@@ -377,12 +448,17 @@ int main(int argc, char* argv[]) {
 			cout << sm[i].time << endl;
 		}
 
-		// OKAY NOW THAT WE HAVE THOSE THEN WE NEED TO GET THE AVERAGE
-		// DISTANCE AND MAX DISTANCE 
-		// AND COMPARE STUFF BETWEEN THESE AND THEN WE HAVE THE THRESHOLDS ??
+		cout << "MAX: " << max(sm) << endl;
+		cout << "MIN: " << min(sm) << endl;
+		cout << "AVG: " << avg(sm) << endl;
 
+		cout << miny(sm) << endl;
+
+		// threshold for time should be min time - .06 for error
+		// so this would be 0.58 for slow
 		
-		// basically go 50% of window 
+		// or look at avg of the bottom half% and then subtract for error
+		// NEED MORE SLOW MEDIUM FAST DATA TO TEST THIS ON
 
 
 		vector<Thresh> final = sm;
@@ -420,6 +496,8 @@ int main(int argc, char* argv[]) {
 
 		// create temp vector and assign 
 
+		cout << "Time before considering " << arg2 << " threshold: " << min(sm) - 0.02 << endl;
+		cout << "Acceleration threshold for " << arg2 << ": " << miny(sm) - 0.3 << endl;
 		format(output, final);
 
 		// quicksort y
