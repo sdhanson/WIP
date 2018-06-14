@@ -1,10 +1,3 @@
-// putting everything in one file
-
-// - Extract from file into another file names slow.txt, med.txt, fast.txt then run rest of program using slow med fast
-//     - Rest of program can be that it plots it 
-//     - Then it pauses and waits for input on the peak number 
-//     - Then after giving the peak numbers it runs the rest and tells you the window tdiff and threshold
-
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -14,10 +7,11 @@
 #include <vector>
 #include <queue>
 
-#include "thresh.h"
+#include "./threshold/thresh.h"
 
 using namespace std;
 
+string NAMES[3] = {"slow", "med", "fast"};
 /* HELPERS FOR PYTHON FUNCTION */
 void gtime(ifstream& input, vector<double>& sums) {
 
@@ -157,14 +151,14 @@ void format(ofstream& output, vector<double>& v) {
 /* ************** PYTHON HELPERS END ***************** */
 
 /* PYTHON fUNCTION TO MANAGE SETTING UP THE PYTHON FILE */
-void python(bool oculus, int ycol, ofstream& output, ifstream& input) {
+void python(bool oculus, int ycol, ofstream& output, ifstream& tinput, ifstream& input) {
 	vector<double> times;
 	vector<double> ys;
 
 	if(oculus) {
-		time(input, times);
+		time(tinput, times);
 	} else {
-		gtime(input, times);
+		gtime(tinput, times);
 	}
 
 	y(input, ys, ycol);
@@ -180,6 +174,106 @@ void python(bool oculus, int ycol, ofstream& output, ifstream& input) {
 
 
 /* THRESHOLD HELPER FUNCTIONS BEGIN HERE */
+
+void gtimeT(ifstream& input, vector<Thresh>& v) {
+
+	// declaring stringstream variables
+	string line, word;
+	double prev;
+	double sum = 0;
+	int count = 0;
+
+	// takes in each line, reads garbage numbers up to column number
+	// takes the column we want and compares to prev max/min and resets
+	// if need be
+	while(getline(input, line)) {
+		stringstream ss;
+
+		// discarding garbage values
+		for(int i=0; i<2; i++) {
+			string temp;
+			ss << line;
+			ss >> temp;
+		}
+
+		// converting column string to double
+		ss << line;
+		ss >> word;
+		stringstream tt;
+		tt << word;
+		double val;
+		tt >> val;
+		double diff;
+
+		diff = val-prev;
+		prev = val;
+		sum += diff;
+
+		v[count].time = sum;
+		count++;
+	}
+	
+}
+
+void timeT(ifstream& input, vector<Thresh>& v) {
+	// declaring stringstream variables
+	string line, word;
+	double prev;
+	int count = 0;
+	double sum = 0;
+
+	// takes in each line, reads garbage numbers up to column number
+	// takes the column we want and compares to prev max/min and resets
+	// if need be
+	while(getline(input, line)) {
+		stringstream ss;
+
+		// discarding garbage values
+		for(int i=0; i<1; i++) {
+			string temp;
+			ss << line;
+			ss >> temp;
+		}
+
+		// converting column string to double
+		ss << line;
+		ss >> word;
+		stringstream tt;
+		tt << word;
+		string val;
+		tt >> val;
+
+		stringstream rr;
+		rr << val;
+		char temp;
+		rr >> temp;
+		int h = 0;
+		while((temp != ':') || (h != 2)) {
+			rr >> temp;
+			if(temp == ':') {
+				h++;
+			}
+		}
+
+		double curr;
+		rr >> curr;
+
+		double diff;
+
+		if(count == 0) {
+			prev = curr;
+			diff = 0;
+		} else {
+			diff = curr-prev;
+			sum += diff;
+			prev=curr;
+		}
+
+		v[count].time = sum;
+		count++;
+	}	
+}
+
 void yT(ifstream& input, vector<Thresh>& y, int col) {
 	// declaring stringstream variables
 	string line, word;
@@ -383,26 +477,37 @@ void formatT(ofstream& output, vector<Thresh>& v) {
 
 
 /* THRESHOLD FUNCTION TO DISCOVER THE THRESHOLD AFTER INPUTTING PEAK # */
-void threshold(bool oculus, ofstream& output, ifstream& input, ifstream& tinput, int peaks) {
+void threshold(bool oculus, ofstream& output, ifstream& input, ifstream& tinput, int peaks, int ycol, int i) {
 		vector<Thresh> ys;
-
-		if(oculus) {
-			time(tinput, ys);
-		} else {
-			gtime(tinput, ys);
-		}
+		double win = 0.2;
+		string type = NAMES[i];
 
 		yT(input, ys, ycol);
+
+		if(oculus) {
+			timeT(tinput, ys);
+		} else {
+			gtimeT(tinput, ys);
+		}
+
 		neg(ys);
 		quicksortY(ys, 0, static_cast<int>(ys.size()-1));
+
+		// slow, med, or fast windows
+		if(i == 0) {
+			win = 0.4;
+		} else if(i == 1) {
+			win = 0.3;
+		} else if(i == 2) {
+			win = 0.2;
+		}
 		vector<Thresh> sm = window(ys, win, peaks);
 		quicksortT(sm, 0, static_cast<int>(sm.size()-1));
 
 		// output 
-		output << "Time before considering " << arg2 << " threshold: " << min(sm) - 0.02 << endl;
-		output << "Acceleration threshold for " << arg2 << ": " << miny(sm) - 0.3 << endl;
+		output << "Time before considering " << type << " threshold: " << min(sm) - 0.02 << endl;
+		output << "Acceleration threshold for " << type << ": " << miny(sm) - 0.3 << endl;
 		formatT(output, sm);
-
 }
 /* ******************************************************************* */
 
@@ -414,6 +519,10 @@ void threshold(bool oculus, ofstream& output, ifstream& input, ifstream& tinput,
 // and then do plot for the next
 // will always do slow, m, fast, so can output the 
 int main(int argc, char* argv[]) {
+
+	if(argc < 2) {
+		cout << "ERROR: SPECIFICY 'OCULUS' OR 'GEAR'" << endl;
+	}
 
 /* DIFFERENCES BETWEEN OCULUS AND GEAR */
 	string path;
@@ -446,41 +555,53 @@ int main(int argc, char* argv[]) {
 
 	// fills in arrays with file paths
 	for(unsigned int i=0; i<file.size(); i++) {
-		string ipath = path + file[i];
-		string opath = "../testing/" + file[i];
+		// string ipath = path + file[i];
+		string ipath = file[i];
+		string opath = "./testing/" + file[i];
 		inputs[i] = ipath;
 		outputs[i] = opath;
 	}
 /* ********************************** */
 
+/* RUN PYTHON SCRIPT AND GET THRESHOLDS FOR EACH */
 for(unsigned int i=0; i<file.size(); i++) {
 	ifstream pyin(inputs[i]);
+	ifstream pytin(inputs[i]);
+
+	string num;
+	stringstream tt;
+	tt << i;
+	tt >> num;
 
 	/* SEND STANDARD HEADER TEMPLATE TO PYTHON FILE */
-	string ppath = "plot" + i + ".py";
+	string ppath = "plot" + num;
+	ppath += ".py";
 	ofstream pyout(ppath);
 	pyout << "import matplotlib.pyplot as plt" << endl;
 
 	/* ******************************************** */
 
 	/* PERFORM ANALYSIS ON THE FILE */
-	python(oculus, ycol, pyout, pyin);
+	python(oculus, ycol, pyout, pyin, pytin);
 
 
 	/* SEND STANDARD FOOTER TEMPLATE TO PYTHON FILE */
 	pyout << "plt.plot(t,y)" << endl;
 	pyout << "plt.ylabel('acceleration')" << endl;
 
-	pyout << "plt.savefig(" << file[i] << ")" << endl;
+	pyout << "plt.savefig(\"" << NAMES[i] << num << "\")" << endl;
 	pyout << "plt.show()" << endl;
 	pyout << "plt.close()" << endl;
 
 	/* ********************************************* */
 
 
-	/* CALL THE PYTHON SCRIPT FROM HERE */
-		string command = "python \"" + pplot + "\"";
-		system(command);
+	/* CALL THE PYTHON SCRIPT FROM HERE */ 
+	string command = "python \"" + ppath + "\"";
+	int res = system(command.c_str());
+	if(res != 0) {
+		cout << "ERROR: PYTHON SCRIPT EXITED W CODE " << res << endl;
+	}
 	/* ******************************** */
 
 	/* ASK USER FOR NUMBER OF PEAKS AND USE AS NUM */
@@ -493,15 +614,16 @@ for(unsigned int i=0; i<file.size(); i++) {
 	ss >> peaks;
 	/* ******************************************* */
 
-
 	/* THRESHOLD ANALYSIS - should write thresholds to a file */
 	ofstream output(outputs[i]);
 	ifstream input(inputs[i]);
 	ifstream tinput(inputs[i]);
 
-	threshold(oculus, output, input, tinput, peaks);
+	threshold(oculus, output, input, tinput, peaks, ycol, i);
 	/* ***************************************************** */
 }
+
+/* ******************** END FOR LOOP ************************ */
 
 	// frees memory
 	delete [] inputs;
