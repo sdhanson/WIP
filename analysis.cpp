@@ -576,11 +576,11 @@ int main(int argc, char* argv[]) {
 	bool oculus = false;
 
 	if(arg == "oculus") {
-		path = "odata/";
+		path = "ofdata/";
 		ycol = 9;
 		oculus = true;
 	} else {
-		path = "gdata/";
+		path = "gfdata/";
 		ycol = 5;
 		oculus = false;
 	}
