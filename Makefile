@@ -7,22 +7,19 @@ all: change ochange oplot fast peak an
 # comp.o: comp.cpp comp.h bitstr.h
 # 	$(CXX) $(CPPFLAGS) -c $< -o $@
 
-peak: peak.cpp
+peak: dev/peak.cpp
 	$(CXX) $(CPPFLAGS) $< -o $@
 
-change: change.cpp
+change: dev/change.cpp
 	$(CXX) $(CPPFLAGS) $< -o $@
 
-ochange: ochange.cpp
+ochange: dev/ochange.cpp
 	$(CXX) $(CPPFLAGS) $< -o $@
 
-oplot: oplot.cpp
+oplot: dev/oplot.cpp
 	$(CXX) $(CPPFLAGS) $< -o $@
 
-fast: fast.cpp
-	$(CXX) $(CPPFLAGS) $< -o $@
-
-fast: fast.cpp
+fast: dev/fast.cpp
 	$(CXX) $(CPPFLAGS) $< -o $@
 
 thres.o: threshold/thresh.cpp threshold/thresh.h
@@ -33,4 +30,4 @@ an: analysis.cpp thres.o threshold/thresh.h threshold/functor.h threshold/qsort.
 
 .PHONY: clean
 clean:
-	rm -rf *.o change
+	rm -rf *.o change ochange oplot fast peak an

@@ -12,6 +12,39 @@
 using namespace std;
 
 string NAMES[3] = {"slow", "med", "fast"};
+
+/* FUNCTION TO CLEAN DATA AND SEND TO NEW SLOW FILE */
+/* ********* ONLY WORKS FOR OCULUS RIGHT NOW ******** */
+void clean(ifstream& input, ofstream& output) {
+	// declaring stringstream variables
+	string line;
+	// takes in each line, reads garbage numbers up to column number
+	// takes the column we want and compares to prev max/min and resets
+	// if need be
+	while(getline(input, line)) {
+		stringstream ss;
+		ss << line;
+		bool select = false;
+		char temp;
+
+		// discarding garbage values
+		while(ss >> temp) {
+			string word;
+			if(temp == 'A') {
+				ss >> word;
+				if(word == "CCELERATION_XYZ:") {
+					select = true;
+					break;
+				}
+			}
+		}
+
+		if(select) {
+			output << line << endl;
+		}	
+	}
+}
+
 /* HELPERS FOR PYTHON FUNCTION */
 void gtime(ifstream& input, vector<double>& sums) {
 
@@ -43,6 +76,9 @@ void gtime(ifstream& input, vector<double>& sums) {
 		double diff;
 
 		diff = val-prev;
+		if(diff < 0) {
+			diff += 60;
+		}
 		prev = val;
 		sum += diff;
 
@@ -102,6 +138,9 @@ void time(ifstream& input, vector<double>& sums) {
 			count++;
 		} else {
 			diff = curr-prev;
+			if(diff < 0) {
+				diff += 60;
+			}
 			sum += diff;
 			prev=curr;
 		}
@@ -206,6 +245,9 @@ void gtimeT(ifstream& input, vector<Thresh>& v) {
 		double diff;
 
 		diff = val-prev;
+		if(diff < 0) {
+			diff += 60;
+		}
 		prev = val;
 		sum += diff;
 
@@ -265,6 +307,9 @@ void timeT(ifstream& input, vector<Thresh>& v) {
 			diff = 0;
 		} else {
 			diff = curr-prev;
+			if(diff < 0) {
+				diff += 60;
+			}
 			sum += diff;
 			prev=curr;
 		}
@@ -531,15 +576,24 @@ int main(int argc, char* argv[]) {
 	bool oculus = false;
 
 	if(arg == "oculus") {
-		path = "../odata/";
+		path = "odata/";
 		ycol = 9;
 		oculus = true;
 	} else {
-		path = "../gdata/";
+		path = "gdata/";
 		ycol = 5;
 		oculus = false;
 	}
 /* *********************************** */
+
+/* CLEAN THE DATA */
+	for(int i=0; i<3; i++) {
+		string cipath = path + NAMES[i] + ".txt";
+		string copath = NAMES[i] + ".txt";
+		ifstream input(cipath);
+		ofstream output(copath);
+		clean(input, output);
+	}
 
 /* FILL ARRAY WITH TRIAL SLOW MEDIUM AND FAST FILE NAMES */
 	unsigned int SIZE = 3;
