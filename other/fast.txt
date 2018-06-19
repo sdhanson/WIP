@@ -1,6 +1,5 @@
-Time before considering fast threshold: 0.414
-Acceleration threshold for fast: 1.70079
 0.919 - 3.35601 - -100
+1.37 - 1.0766 - -100
 1.621 - 2.72005 - -100
 2.222 - 2.43894 - -100
 2.807 - 2.00079 - -100

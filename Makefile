@@ -2,7 +2,7 @@ BIN_DIR = bin
 CXX = g++
 CPPFLAGS = -g -Wall -Wextra -Wconversion --std=c++11
 
-all: change ochange oplot fast peak an
+all: change ochange oplot fast peak an c an2
 
 # comp.o: comp.cpp comp.h bitstr.h
 # 	$(CXX) $(CPPFLAGS) -c $< -o $@
@@ -27,6 +27,12 @@ thres.o: threshold/thresh.cpp threshold/thresh.h
 
 an: analysis.cpp thres.o threshold/thresh.h threshold/functor.h threshold/qsort.h
 	$(CXX) $(CPPFLAGS) analysis.cpp threshold/thresh.cpp -o $@
+
+an2: an2.cpp thres.o threshold/thresh.h threshold/functor.h threshold/qsort.h
+	$(CXX) $(CPPFLAGS) an2.cpp threshold/thresh.cpp -o $@
+
+c: clean.cpp thres.o threshold/thresh.h threshold/functor.h threshold/qsort.h
+	$(CXX) $(CPPFLAGS) clean.cpp threshold/thresh.cpp -o $@
 
 .PHONY: clean
 clean:

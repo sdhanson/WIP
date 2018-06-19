@@ -214,26 +214,27 @@ void step(vector<double>& t, vector<double>& v) {
 		// could do)
 
 		// INITIAL THRESHOLDS FOR MEEEEEEE THAT WORKED
-		// if(t[i]-pt > 0.77) {
-		// 	threshold = 2.0;
-		// 	window = 0.4;
-		// } else if(t[i]-pt > 0.40) {
-		// 	threshold = 2.5;
-		// 	window = 0.3;
-		// } else if(t[i]-pt > 0.19){
-		// 	threshold = 3.75;
-		// 	window = 0.2;
-		// } 
-		if(t[i]-pt > 0.67) {
-			threshold = 2.1;
+		if(t[i]-pt > 0.77) {
+			threshold = 2.0;
 			window = 0.4;
-		} else if(t[i]-pt > 0.44) {
-			threshold = 2.4;
+		} else if(t[i]-pt > 0.40) {
+			threshold = 2.5;
 			window = 0.3;
-		} else if(t[i]-pt > 0.33){
-			threshold = 5.0;
+		} else if(t[i]-pt > 0.19){
+			threshold = 3.75;
 			window = 0.2;
 		} 
+		// if(t[i]-pt > 0.5) {
+		// 	threshold = 0.8;
+		// 	window = 0.4;
+		// } else if(t[i]-pt > 0.4) {
+		// 	threshold = 1.7;
+		// 	window = 0.3;
+		// } 
+		// else if(t[i]-pt > 0.28){
+		// 	threshold = 1.8;
+		// 	window = 0.2;
+		// } 
 		if(v[i] > threshold && ((t[i]-pt) > window)) {
 			times.push_back(t[i]);
 			vals.push_back(v[i]);
@@ -259,7 +260,7 @@ int main(int argc, char* argv[]) {
 	}
 
 	bool oculus = false;
-	string path = "./gdata/";
+	string path = "dev/gdata/";
 	int xcol = 4;
 	int ycol = 5;
 	int zcol = 6;
@@ -278,14 +279,16 @@ int main(int argc, char* argv[]) {
 		// 				"oVarL.txt", "oVar201.txt", "oVar202.txt", "oVar203.txt",
 		// 				"ohkneeM.txt", "oStand.txt", "oLook.txt", "oVarHK201.txt",
 		// 				"oVarHK202.txt", "oVarHK203.txt"};
-		SIZE = 11;
-		string oculus[SIZE] = {"oVarHK181.txt", "oVarHK16.txt", "oVarHK101.txt", "oVarHK17.txt",
-								"oVarHK131.txt", "oVarHK171.txt", "oVarHK121.txt", "oVar161.txt",
-								"oVarHK201.txt", "oVarHK202.txt", "oVarHK203.txt"};
+		// SIZE = 11;
+		// string oculus[SIZE] = {"oVarHK181.txt", "oVarHK16.txt", "oVarHK101.txt", "oVarHK17.txt",
+		// 						"oVarHK131.txt", "oVarHK171.txt", "oVarHK121.txt", "oVar161.txt",
+		// 						"oVarHK201.txt", "oVarHK202.txt", "oVarHK203.txt"};
+		SIZE = 1;
+		string oculus[SIZE] = {"onidhi.txt"};
 		for(unsigned int i=0; i<SIZE; i++) {
 			file.push_back(oculus[i]);
 		}
-		path = "./odata/";
+		path = "dev/odata/";
 		xcol = 8;
 		ycol = 9;
 		zcol = 10;
@@ -315,8 +318,8 @@ int main(int argc, char* argv[]) {
 		// string ipath = "./odata/" + file[i];
 		// string opath = "./panalysis/P" + file[i];
 		string ipath = path + file[i];
-		string opath = "./kanalysis/Kt" + file[i];
-		string dopath = "./kanalysis/Kdt" + file[i];
+		string opath = "dev/kanalysis/Kt" + file[i];
+		string dopath = "dev/kanalysis/Kdt" + file[i];
 		inputs[i] = ipath;
 		outputs[i] = opath;
 		doutputs[i] = dopath;
@@ -339,6 +342,7 @@ int main(int argc, char* argv[]) {
 
 		ifstream input(inputs[j]);
 		cout << "HEREEEEEEE" << endl;
+
 		if(oculus) {
 			time(input, sums, times);
 		} else {
@@ -355,10 +359,12 @@ int main(int argc, char* argv[]) {
 		y(input2, yd, ycol);
 
 
-		vector<double> d = derivative(yd);
+		// vector<double> d = derivative(yd);
+		// cout << "5" << endl;
 
-		step(sums, d);
-		format_step(doutput, sums, d);
+		// step(sums, d);
+		// format_step(doutput, sums, d);
+		// cout << "6" << endl;
 
 	}
 
