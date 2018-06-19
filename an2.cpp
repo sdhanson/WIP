@@ -362,20 +362,22 @@ vector<Thresh> test(vector<Thresh>& v) {
 	bool low = false;
 	double end = -100;
 	double maxy = -100;
+	double nend = 0;
 	int maxi = 0;
 	bool alert = false;
 	bool high = false;
 	bool valid = false;
 	vector<Thresh> final;
 	for(unsigned int i=0; i<v.size(); i++) {
+		if(v[i].time > nend) {
 		if(!alert) {
-			if((v[i].y < -0.7) || (v[i].y > 1.25)) {
+			if((v[i].y < -1.5) || (v[i].y > 3)) {
 				alert = true;
 				end = v[i].time + 0.25;
-				if(v[i].y < -0.7) {
+				if(v[i].y < -1.5) {
 					low = true;
 					high = false;	
-				} else if(v[i].y > 1.25) {
+				} else if(v[i].y > 3) {
 					high = true;
 					low = false;
 				}
@@ -384,10 +386,10 @@ vector<Thresh> test(vector<Thresh>& v) {
 			}
 		}
 		else if(alert && (v[i].time < end)) {
-			if(high && (v[i].y < -0.7)) {
+			if(high && (v[i].y < -1.5)) {
 					valid = true;
 			}
-			else if(low && (v[i].y > 1.25)) {
+			else if(low && (v[i].y > 3)) {
 				valid = true;
 			}
 			if(v[i].y > maxy) {
@@ -401,56 +403,10 @@ vector<Thresh> test(vector<Thresh>& v) {
 			alert = false;
 			low = false;
 			high = false;
+			nend = v[maxi].time + 0.25;
 		}
 	}
-
-
-
-
-
-
-
-
-
-	// 	if(normal) {
-	// 		if((v[i].y < -0.7) || (v[i].y > 1.25)) {
-	// 			normal = false;
-	// 			init = i;
-	// 			end = v[i].time + 0.25;
-	// 			if(v[i].y < -0.7) {
-	// 				low = true;
-	// 			}
-	// 		}
-	// 	} else if(!low && (v[i].y > -0.7)) { 
-	// 		if(prev > v[i].y) {
-	// 			possible = pi;
-	// 		}
-	// 		prev = v[i].y;
-	// 		pi = i;
-	// 	} 
-	// 	else if(((v[i].time < end)) && ((low && (v[i].y > 1.25)) || (!low && (v[i].y < -0.7)))) {
-	// 		// else if !low then keep track of the high point
-	// 		if(!ignore) {
-	// 			ignore = true;
-	// 			init = i;	
-	// 		} else if(low && (prev > v[i].y)) {
-	// 			final.push_back(v[pi]);
-	// 			set = true;
-	// 		} else if(!low) {
-	// 			final.push_back(v[possible]);
-	// 			set = true;
-	// 		}
-	// 		prev = v[i].y;
-	// 		pi = i;
-	// 	} else if(v[i].time >= end) {
-	// 		if(!set) {
-	// 			final.push_back(v[init]);
-	// 		}
-	// 		ignore = false;
-	// 		normal = true;
-	// 		low = false;
-	// 	}
-	// }
+	}
 	return final;
 }
 
@@ -504,21 +460,30 @@ int main(int argc, char* argv[]) {
 	}
 /* *********************************** */
 
-/* CLEAN THE DATA */
-	for(int i=0; i<3; i++) {
-		string cipath = path + NAMES[i] + ".txt";
-		string copath = NAMES[i] + ".txt";
-		ifstream input(cipath);
-		ofstream output(copath);
-		clean(input, output);
-	}
+// /* CLEAN THE DATA */
+// 	for(int i=0; i<3; i++) {
+// 		string cipath = path + NAMES[i] + ".txt";
+// 		string copath = NAMES[i] + ".txt";
+// 		ifstream input(cipath);
+// 		ofstream output(copath);
+// 		clean(input, output);
+// 	}
 
 /* FILL ARRAY WITH TRIAL SLOW MEDIUM AND FAST FILE NAMES */
-	unsigned int SIZE = 3;
+	// unsigned int SIZE = 3;
 	vector<string> file;
-	file.push_back("slow.txt");
-	file.push_back("med.txt");
-	file.push_back("fast.txt");
+	// file.push_back("slow.txt");
+	// file.push_back("med.txt");
+	// file.push_back("fast.txt");
+		path = "dev/odata/";
+		unsigned int SIZE = 8;
+		string o[SIZE] = {"oVarHK181.txt", "oVarHK16.txt", "oVarHK101.txt", "oVarHK17.txt",
+								"oVarHK131.txt", "oVarHK171.txt", "oVarHK121.txt", "oVar161.txt",
+								};
+
+		for(unsigned int i=0; i<SIZE; i++) {
+			file.push_back(o[i]);
+		}
 /* **************************************************** */
 
 /* CREATE INPUT AND OUTPUT FILE PATHS */
@@ -527,8 +492,8 @@ int main(int argc, char* argv[]) {
 
 	// fills in arrays with file paths
 	for(unsigned int i=0; i<file.size(); i++) {
-		// string ipath = path + file[i];
-		string ipath = file[i];
+		 string ipath = path + file[i];
+		// string ipath = file[i];
 		string opath = "./other/" + file[i];
 		inputs[i] = ipath;
 		outputs[i] = opath;
@@ -581,6 +546,9 @@ for(unsigned int i=0; i<file.size(); i++) {
 	ifstream input(inputs[i]);
 	ifstream tinput(inputs[i]);
 
+	// need to deal with fake peaks so if find something lower in time period then 
+	// end is +0.25 from there
+	// and if turns out to be a dud (well won't need to deal with that bc wouldve had something greater)
 	peaks(oculus, output, input, tinput, ycol, i);
 	/* ***************************************************** */
 }
