@@ -11,7 +11,7 @@
 
 using namespace std;
 
-string NAMES[3] = {"slow", "med", "fast"};
+string NAMES[12] = {"oh1", "oh2", "oh3", "oh4", "on1", "on2", "on3", "on4", "oc1", "oc2", "oc3", "oc4"};
 
 /* FUNCTION TO CLEAN DATA AND SEND TO NEW SLOW FILE */
 /* ********* ONLY WORKS FOR OCULUS RIGHT NOW ******** */
@@ -368,16 +368,18 @@ vector<Thresh> test(vector<Thresh>& v) {
 	bool high = false;
 	bool valid = false;
 	vector<Thresh> final;
+	double ht = 2.8;
+	double lt = -2.2;
 	for(unsigned int i=0; i<v.size(); i++) {
 		if(v[i].time > nend) {
 		if(!alert) {
-			if((v[i].y < -1.5) || (v[i].y > 3)) {
+			if((v[i].y < lt) || (v[i].y > ht)) {
 				alert = true;
 				end = v[i].time + 0.25;
-				if(v[i].y < -1.5) {
+				if(v[i].y < lt) {
 					low = true;
 					high = false;	
-				} else if(v[i].y > 3) {
+				} else if(v[i].y > ht) {
 					high = true;
 					low = false;
 				}
@@ -386,10 +388,10 @@ vector<Thresh> test(vector<Thresh>& v) {
 			}
 		}
 		else if(alert && (v[i].time < end)) {
-			if(high && (v[i].y < -1.5)) {
+			if(high && (v[i].y < lt)) {
 					valid = true;
 			}
-			else if(low && (v[i].y > 3)) {
+			else if(low && (v[i].y > ht)) {
 				valid = true;
 			}
 			if(v[i].y > maxy) {
@@ -460,30 +462,41 @@ int main(int argc, char* argv[]) {
 	}
 /* *********************************** */
 
-// /* CLEAN THE DATA */
-// 	for(int i=0; i<3; i++) {
-// 		string cipath = path + NAMES[i] + ".txt";
-// 		string copath = NAMES[i] + ".txt";
-// 		ifstream input(cipath);
-// 		ofstream output(copath);
-// 		clean(input, output);
-// 	}
+/* CLEAN THE DATA */
+	for(int i=0; i<12; i++) {
+		string cipath = path + NAMES[i] + ".txt";
+		string copath = NAMES[i] + ".txt";
+		ifstream input(cipath);
+		ofstream output(copath);
+		clean(input, output);
+	}
 
 /* FILL ARRAY WITH TRIAL SLOW MEDIUM AND FAST FILE NAMES */
-	// unsigned int SIZE = 3;
+	unsigned int SIZE = 4;
 	vector<string> file;
+	// file.push_back("oh1.txt");
+	// file.push_back("oh2.txt");
+	// file.push_back("oh3.txt");
+	// file.push_back("oh4.txt");
+	// file.push_back("on1.txt");
+	// file.push_back("on2.txt");
+	// file.push_back("on3.txt");
+	// file.push_back("on4.txt");
+	file.push_back("oc1.txt");
+	file.push_back("oc2.txt");
+	file.push_back("oc3.txt");
+	file.push_back("oc4.txt");
 	// file.push_back("slow.txt");
 	// file.push_back("med.txt");
 	// file.push_back("fast.txt");
-		path = "dev/odata/";
-		unsigned int SIZE = 8;
-		string o[SIZE] = {"oVarHK181.txt", "oVarHK16.txt", "oVarHK101.txt", "oVarHK17.txt",
-								"oVarHK131.txt", "oVarHK171.txt", "oVarHK121.txt", "oVar161.txt",
-								};
+		// path = "dev/odata/";
+		// unsigned int SIZE = 12;
+		// string o[SIZE] = {"onidhi.txt",
+		// 						};
 
-		for(unsigned int i=0; i<SIZE; i++) {
-			file.push_back(o[i]);
-		}
+		// for(unsigned int i=0; i<SIZE; i++) {
+		// 	file.push_back(o[i]);
+		// }
 /* **************************************************** */
 
 /* CREATE INPUT AND OUTPUT FILE PATHS */
@@ -492,8 +505,8 @@ int main(int argc, char* argv[]) {
 
 	// fills in arrays with file paths
 	for(unsigned int i=0; i<file.size(); i++) {
-		 string ipath = path + file[i];
-		// string ipath = file[i];
+		 // string ipath = path + file[i];
+		string ipath = file[i];
 		string opath = "./other/" + file[i];
 		inputs[i] = ipath;
 		outputs[i] = opath;

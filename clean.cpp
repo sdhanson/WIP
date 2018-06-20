@@ -11,7 +11,7 @@
 
 using namespace std;
 
-string NAMES[1] = {"onidhi"};
+string NAMES[12] = {"oh1", "oh2", "oh3", "oh4", "on1", "on2", "on3", "on4", "oc1", "oc2", "oc3", "oc4"};
 
 /* FUNCTION TO CLEAN DATA AND SEND TO NEW SLOW FILE */
 /* ********* ONLY WORKS FOR OCULUS RIGHT NOW ******** */
@@ -587,7 +587,7 @@ int main(int argc, char* argv[]) {
 /* *********************************** */
 
 /* CLEAN THE DATA */
-	for(int i=0; i<3; i++) {
+	for(int i=0; i<12; i++) {
 		string cipath = path + NAMES[i] + ".txt";
 		string copath = NAMES[i] + ".txt";
 		ifstream input(cipath);
@@ -596,9 +596,20 @@ int main(int argc, char* argv[]) {
 	}
 
 /* FILL ARRAY WITH TRIAL SLOW MEDIUM AND FAST FILE NAMES */
-	unsigned int SIZE = 1;
+	unsigned int SIZE = 12;
 	vector<string> file;
-	file.push_back("onidhi.txt");
+	file.push_back("oh1.txt");
+	file.push_back("oh2.txt");
+	file.push_back("oh3.txt");
+	file.push_back("oh4.txt");
+	file.push_back("on1.txt");
+	file.push_back("on2.txt");
+	file.push_back("on3.txt");
+	file.push_back("on4.txt");
+	file.push_back("oc1.txt");
+	file.push_back("oc2.txt");
+	file.push_back("oc3.txt");
+	file.push_back("oc4.txt");
 /* **************************************************** */
 
 /* CREATE INPUT AND OUTPUT FILE PATHS */
