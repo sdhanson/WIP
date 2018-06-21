@@ -637,7 +637,7 @@ for(unsigned int i=0; i<file.size(); i++) {
 	tt >> num;
 
 	/* SEND STANDARD HEADER TEMPLATE TO PYTHON FILE */
-	string ppath = "plot" + num;
+	string ppath = NAMES[i];
 	ppath += ".py";
 	ofstream pyout(ppath);
 	pyout << "import matplotlib.pyplot as plt" << endl;
