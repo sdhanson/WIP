@@ -6,7 +6,7 @@ import matplotlib.animation as manimation
 FFMpegWriter = manimation.writers['ffmpeg']
 metadata = dict(title='Movie Test', artist='Matplotlib',
                 comment='Movie support!')
-writer = FFMpegWriter(fps=15, metadata=metadata)
+writer = FFMpegWriter(fps=52, metadata=metadata)
 
 fig = plt.figure()
 
@@ -35,5 +35,5 @@ plt.plot(xsample, ysample, 'r-')
 with writer.saving(fig, 'n1.mp4', dpi=100):
     for i in range(400):
         plt.plot(xsample[i], ysample[i], linestyle='--', marker='o', color='b', markersize=1)
-        plt.pause(xsample[i+1]-xsample[i])
+        # plt.pause(xsample[i+1]-xsample[i])
         writer.grab_frame()
