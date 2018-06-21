@@ -1,4 +1,3 @@
-
 06-20 22:21:14.915 16630 16645 I Unity   : ACCELERATION_XYZ: -0.8125616 -2.407998 -2.05038 EULER_ANGLES_XYZ 6.585437 0.8262509 0.7870481 False 3 False 0 0 1.676791
 06-20 22:21:14.915 16630 16645 I Unity   :
 06-20 22:21:14.915 16630 16645 I Unity   : (Filename: ./artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
