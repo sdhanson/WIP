@@ -22,18 +22,38 @@ ysample = [-2.408, -1.0689, 0.617498, 1.84634, 2.17468, 1.25721, 0.306395, -0.00
 xdata = []
 ydata = []
  
-plt.show()
+
  
-axes = plt.gca()
+axes = fig.add_subplot(111)
 # axes.set_xlim(0, 100)
 # axes.set_ylim(-50, +50)
 line, = axes.plot(xdata, ydata, 'r-')
  
 plt.xlabel('Nidhi 1')
 plt.ylabel('Y Acceleration')
-plt.plot(xsample, ysample, 'r-')
-with writer.saving(fig, 'n1.mp4', dpi=100):
+# plt.plot(xsample, ysample, 'r-')
+with writer.saving(fig, 'n17.mp4', dpi=100):
     for i in range(400):
-        plt.plot(xsample[i], ysample[i], linestyle='--', marker='o', color='b', markersize=1)
+    	xdata.append(xsample[i])
+    	ydata.append(ysample[i])
+    	plt.plot(xdata, ydata, 'go--', linewidth=2, markersize=1)
+        # plt.plot(xsample[i], ysample[i], linestyle='--', marker='o', color='b', markersize=1)
         # plt.pause(xsample[i+1]-xsample[i])
         writer.grab_frame()
+
+
+# plt.xlabel('Nidhi 1')
+# plt.ylabel('Y Acceleration')
+# # plt.plot(xsample, ysample, 'r-')
+# with writer.saving(fig, 'n1234675.mp4', dpi=100):
+# 	for i in range(20):
+# 		xdata.append(xsample[i])
+# 		ydata.append(ysample[i])
+# 		line.set_xdata(xdata);
+# 		line.set_ydata(ydata);
+# 		plt.plot(xdata, ydata, 'go--', linewidth=2, markersize=12)
+# 		# plt.plot(xdata, ydata, linestyle='--', marker='o', color='b', markersize=1)
+#         plt.pause(xsample[i+1]-xsample[i])
+#         writer.grab_frame()
+
+plt.show()
