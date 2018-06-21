@@ -6,7 +6,7 @@ import matplotlib.animation as manimation
 FFMpegWriter = manimation.writers['ffmpeg']
 metadata = dict(title='Movie Test', artist='Matplotlib',
                 comment='Movie support!')
-writer = FFMpegWriter(fps=48, metadata=metadata)
+writer = FFMpegWriter(fps=50, metadata=metadata)
 
 fig = plt.figure()
 
@@ -32,7 +32,7 @@ line, = axes.plot(xdata, ydata, 'r-')
 plt.xlabel('Nidhi 1')
 plt.ylabel('Y Acceleration')
 # plt.plot(xsample, ysample, 'r-')
-with writer.saving(fig, 'n16.mp4', dpi=100):
+with writer.saving(fig, 'n15.mp4', dpi=100):
     for i in range(400):
     	xdata.append(xsample[i])
     	ydata.append(ysample[i])
