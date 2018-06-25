@@ -11,7 +11,7 @@
 
 using namespace std;
 
-string NAMES[15] = {"oh1", "oh2", "oh3", "oh4", "on1", "on2", "on3", "on4", "oc1", "oc2", "oc3", "oc4", "os1", "os2", "os3"};
+string NAMES[3] = {"trial1", "trial2", "trial3"};
 
 /* FUNCTION TO CLEAN DATA AND SEND TO NEW SLOW FILE */
 /* ********* ONLY WORKS FOR OCULUS RIGHT NOW ******** */
@@ -426,7 +426,7 @@ vector<Thresh> window(vector<Thresh>& v, double w, int peaks) {
 
 	int count = static_cast<int>(v.size()-1);
 	final.push_back(v[count--]);
-	while((final.size() < peaks) && (count > 0)) {
+	while(((int)final.size() < peaks) && (count > 0)) {
 		bool good = true;
 		for(unsigned int i=0; i<final.size();i++) {
 			if(abs(abs(v[count].time) - abs(final[i].time)) < w) {
@@ -565,9 +565,11 @@ void threshold(bool oculus, ofstream& output, ifstream& input, ifstream& tinput,
 // will always do slow, m, fast, so can output the 
 int main(int argc, char* argv[]) {
 
-	if(argc < 2) {
-		cout << "ERROR: SPECIFICY 'OCULUS' OR 'GEAR'" << endl;
+	if(argc < 3) {
+		cout << "ERROR: SPECIFICY 'OCULUS' OR 'GEAR' AND OUTPUT DIRECTORY (MAKE DIRECTORY FIRST)" << endl;
 	}
+
+	string dir = argv[2];
 
 /* DIFFERENCES BETWEEN OCULUS AND GEAR */
 	string path;
@@ -576,20 +578,20 @@ int main(int argc, char* argv[]) {
 	bool oculus = false;
 
 	if(arg == "oculus") {
-		path = "ofdata/";
+		path = "input/";
 		ycol = 9;
 		oculus = true;
 	} else {
-		path = "gfdata/";
+		path = "input/";
 		ycol = 5;
 		oculus = false;
 	}
 /* *********************************** */
 
 /* CLEAN THE DATA */
-	for(int i=0; i<15; i++) {
+	for(int i=0; i<3; i++) {
 		string cipath = path + NAMES[i] + ".txt";
-		string copath = NAMES[i] + ".txt";
+		string copath = NAMES[i] + "_clean" + ".txt";
 		ifstream input(cipath);
 		ofstream output(copath);
 		clean(input, output);
@@ -598,21 +600,9 @@ int main(int argc, char* argv[]) {
 /* FILL ARRAY WITH TRIAL SLOW MEDIUM AND FAST FILE NAMES */
 	unsigned int SIZE = 3;
 	vector<string> file;
-	// file.push_back("oh1.txt");
-	// file.push_back("oh2.txt");
-	// file.push_back("oh3.txt");
-	// file.push_back("oh4.txt");
-	// file.push_back("on1.txt");
-	// file.push_back("on2.txt");
-	// file.push_back("on3.txt");
-	// file.push_back("on4.txt");
-	// file.push_back("oc1.txt");
-	// file.push_back("oc2.txt");
-	// file.push_back("oc3.txt");
-	// file.push_back("oc4.txt");
-	file.push_back("os1.txt");
-	file.push_back("os2.txt");
-	file.push_back("os3.txt");
+	file.push_back("trial1_clean.txt");
+	file.push_back("trial2_clean.txt");
+	file.push_back("trial3_clean.txt");
 /* **************************************************** */
 
 /* CREATE INPUT AND OUTPUT FILE PATHS */
@@ -623,7 +613,7 @@ int main(int argc, char* argv[]) {
 	for(unsigned int i=0; i<file.size(); i++) {
 		// string ipath = path + file[i];
 		string ipath = file[i];
-		string opath = "./cleaned/" + file[i];
+		string opath = "./" + dir + "/" + file[i];
 		inputs[i] = ipath;
 		outputs[i] = opath;
 	}
@@ -668,7 +658,9 @@ for(unsigned int i=0; i<file.size(); i++) {
 	if(res != 0) {
 		cout << "ERROR: PYTHON SCRIPT EXITED W CODE " << res << endl;
 	}
+
 	/* ******************************** */
+
 
 	// /* ASK USER FOR NUMBER OF PEAKS AND USE AS NUM */
 	// cout << "Number of peaks? " << endl;
@@ -690,6 +682,29 @@ for(unsigned int i=0; i<file.size(); i++) {
 }
 
 /* ******************** END FOR LOOP ************************ */
+
+	/* MOVE THE REST OF THE FILES TO THE NEW DIRECTORY */
+	string command2 = "mv *.txt " + dir;
+	int res2 = system(command2.c_str());
+
+	if(res2 != 0) {
+		cout << "ERROR: TERMINAL DID NOT MOVE *.TXT W CODE " << res2 << endl;
+	}
+
+	string command3 = "mv *.py " + dir;
+	int res3 = system(command3.c_str());
+
+	if(res3 != 0) {
+		cout << "ERROR: TERMINAL DID NOT MOVE *.PY W CODE " << res3 << endl;
+	}
+
+	string command4 = "mv *.png " + dir;
+	int res4 = system(command4.c_str());
+
+	if(res4 != 0) {
+		cout << "ERROR: TERMINAL DID NOT MOVE *.PNG W CODE " << res4 << endl;
+	}
+	/* *********************************************** */
 
 	// frees memory
 	delete [] inputs;
